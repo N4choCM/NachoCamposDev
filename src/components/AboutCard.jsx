@@ -18,12 +18,12 @@ const AboutCard = ({ darkMode }) => {
 			</h1>
 			<div className="container">
 				<div className="row">
-					<div className="col-12">
+					<div className="offset-lg-2 col-lg-8">
 						<div
 							className={
 								darkMode
 									? "card bg-card-dark text-white"
-									: "card"
+									: "card bg-card-light text-dark"
 							}
 						>
 							<img
@@ -33,7 +33,7 @@ const AboutCard = ({ darkMode }) => {
 							/>
 							<img
 								src={nachoPicLg}
-								className="d-none d-lg-block border-nacho rounded-circle w-25 mx-auto my-4"
+								className="d-none d-lg-block border-nacho rounded-circle w-50 mx-auto mt-5 mb-4"
 								alt="Nacho Campos Martí"
 							/>
 							<hr className="d-none d-lg-block" />
@@ -41,11 +41,11 @@ const AboutCard = ({ darkMode }) => {
 								<h2 className="card-title text-center mb-3">
 									Experience
 								</h2>
-								<h5 className="ms-md-5">
+								<h5 className="mx-md-5">
 									Full Stack Developer at Dekra Digital &
 									Product Solutions (2023 - ongoing)
 								</h5>
-								<ul className="ms-md-5 mb-4">
+								<ul className="mx-md-5 mb-4">
 									<li>
 										Development of Backend Rest APIs with
 										Java/Spring Boot
@@ -71,7 +71,7 @@ const AboutCard = ({ darkMode }) => {
 								<h2 className="card-title text-center mt-3 mb-3">
 									Official Background
 								</h2>
-								<ul className="ms-md-5 mb-4">
+								<ul className="mx-md-5 mb-4">
 									<li>
 										BSc in Computing Engineering at UNED
 										(2023 - ongoing)
@@ -94,9 +94,19 @@ const AboutCard = ({ darkMode }) => {
 								<h2 className="card-title text-center mt-3 mb-3">
 									Certificates
 								</h2>
-								<ul className="ms-md-5">
+								<ul className="mx-md-5">
 									<li>Bootcamp in Web App Development using the MERN stack - Rolling Code School (2022 - 2023)</li>
                   <li>Spring Boot and Angular, developing apps as a Full Stack Developer - Udemy (2022)</li>
+								</ul>
+								<hr />
+								<h2 className="card-title text-center mt-3 mb-3">
+									Languages
+								</h2>
+								<ul className="mx-md-5">
+									<li>Spanish - Native Language</li>
+                  <li>English - C1 TOEFL</li>
+									<li>German - B1 TELC</li>
+									<li>French - B1 not certificated (I worked in France for 1 year as a Spanish teacher)</li>
 								</ul>
 							</div>
 						</div>
