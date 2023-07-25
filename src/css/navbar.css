@@ -1,0 +1,33 @@
+.img-logo {
+    width: 4rem;
+  }
+
+  .img-logo-white{
+    filter: contrast(0) brightness(10);
+  }
+  
+  .red-white-text:hover{
+    color: white !important;
+  }
+  
+  .navbar-custom{
+    background-color: #895ff9 !important;
+  }
+  
+  .hover-custom:hover{
+    background-color: #5f42b0 !important;
+    border-radius: 5px;
+  }
+
+  .navbar-brand div {
+    display: flex; /* Usa flexbox para alinear los elementos en línea */
+    align-items: center; /* Centra verticalmente los elementos en el contenedor */
+  }
+  h4, h6{
+    font-family: monospace;
+  }
+
+  .form-check-input:checked {
+    background-color: #333 !important;
+    border-color: #333 !important;
+}
