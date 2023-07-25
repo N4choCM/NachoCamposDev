@@ -34,6 +34,7 @@ const Banner = ({ darkMode }) => {
 						<br />
 						<br />
 						<br />
+						<span className="text-container">
 						<h3
 							className={
 								darkMode
@@ -43,7 +44,10 @@ const Banner = ({ darkMode }) => {
 						>
 							Hey!
 						</h3>
+
+						</span>
 						<br />
+						<span className="text-container">
 						<h5
 							className={
 								darkMode
@@ -53,6 +57,8 @@ const Banner = ({ darkMode }) => {
 						>
 							I&#39;m Nacho Campos,{" "}
 						</h5>
+						</span>
+						<span className="text-container">
 						<h5
 							className={
 								darkMode
@@ -62,6 +68,7 @@ const Banner = ({ darkMode }) => {
 						>
 							and I develop software solutions.
 						</h5>
+						</span>
 						<br />
 						<button
 							className={
