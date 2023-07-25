@@ -1,9 +1,13 @@
+import AboutCard from '../components/AboutCard';
 import Banner from '../components/Banner'
 import PropTypes from 'prop-types';
 
 const HomeScreen = ({changeDarkMode, darkMode}) => {
   return (
-    <Banner changeDarkMode={changeDarkMode} darkMode={darkMode} />
+    <>
+      <Banner changeDarkMode={changeDarkMode} darkMode={darkMode} />
+      <AboutCard changeDarkMode={changeDarkMode} darkMode={darkMode} />
+    </>
   )
 }
 
