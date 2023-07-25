@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap");
+
+.container-carousel {
+	position: relative;
+	height: 100vh;
+}
+.container-carousel img {
+	height: 100%;
+	object-fit: cover;
+	object-position: top;
+}
+
+.container-carousel-dark img {
+	height: 100%;
+	filter: grayscale(0.8);
+	object-fit: cover;
+	object-position: top;
+}
+
+.carousel-item {
+	height: 100vh;
+}
+
+.overlay {
+	font-family: "Ubuntu Condensed", sans-serif;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 99;
+}
+
+.overlay-dark {
+	font-family: "Ubuntu Condensed", sans-serif;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.571);
+	z-index: 99;
+}
+
+.overlay h3 {
+	font-size: 50px;
+}
+
+.overlay-dark h3 {
+	font-size: 50px;
+}
+
+  
+  .writing-machine {
+	white-space: nowrap;
+	overflow: hidden;
+	border-right: 2px solid #000;
+	animation: write 2s steps(40, end), blink-caret 0.5s step-end infinite;
+  }
+
+  /* Estilo base del botón */
+.btn-load {
+	opacity: 0; /* Inicialmente el botón estará oculto */
+	transition: opacity 3s; /* Agregamos una transición de 1 segundo para el efecto de aparición */
+  }
+  
+  /* Aplicamos la animación solo a los botones con la clase .btn-appear */
+  .btn-appear {
+	animation: appear 6s forwards; /* Usamos una animación llamada 'appear' que dura 2 segundos */
+  }
+  
+  /* Definimos la animación 'appear' */
+  @keyframes appear {
+	from {
+	  opacity: 0; /* Comienza con una opacidad de 0 (oculto) */
+	}
+	to {
+	  opacity: 1; /* Termina con una opacidad de 1 (completamente visible) */
+	}
+  }
+  
+  
+  @keyframes write {
+	from {
+	  width: 0;
+	}
+	to {
+	  width: 100%;
+	}
+  }
+  
+  @keyframes blink-caret {
+	from, to {
+	  border-color: transparent;
+	}
+	50% {
+	  border-color: #000;
+	}
+  }
+  
