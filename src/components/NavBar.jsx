@@ -1,6 +1,7 @@
 import "../css/navbar.css";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/favIcon.png";
+import PropTypes from "prop-types";
 
 const NavBar = ({ darkMode, changeDarkMode }) => {
 	return (
@@ -233,6 +234,11 @@ const NavBar = ({ darkMode, changeDarkMode }) => {
 			</nav>
 		</header>
 	);
+};
+
+NavBar.propTypes = {
+	darkMode: PropTypes.bool.isRequired,
+	changeDarkMode: PropTypes.func.isRequired,
 };
 
 export default NavBar;
