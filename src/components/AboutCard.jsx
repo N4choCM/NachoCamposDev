@@ -2,6 +2,8 @@ import PropTypes from "prop-types";
 // import nachoPicSm from "../assets/nachoPic-sm.png";
 import nachoPicLg from "../assets/nachoPic-lg.png";
 import "../css/about.css";
+import 'atropos/css'
+import Atropos from 'atropos/react';
 
 const AboutCard = ({ darkMode }) => {
 	return (
@@ -126,20 +128,32 @@ const AboutCard = ({ darkMode }) => {
 			</div>
 		</> */}
 			{!darkMode ? <hr /> : ""}
+			<Atropos
+        activeOffset={40}
+        shadowScale={1.05}
+				shadow={false}
+        onEnter={() => console.log('Enter')}
+        onLeave={() => console.log('Leave')}
+        onRotate={(x, y) => console.log('Rotate', x, y)}
+      >
 			<img
 				src={nachoPicLg}
-				className="d-none d-lg-block border-nacho rounded-circle w-25 mx-auto mt-5 mb-4"
+				className="d-none d-lg-block border-nacho rounded-circle w-25 mx-auto mt-5"
 				alt="Nacho Campos Martí"
+				data-atropos-offset="-5"
 			/>
 			<h1
 				className={
 					darkMode
-						? "text-center text-white my-4"
-						: "text-center text-dark my-4"
+						? "text-center text-white mb-4"
+						: "text-center text-dark mb-4"
 				}
+				data-atropos-offset="5"
 			>
 				About Me
 			</h1>
+
+			</Atropos>
 				<div className="container">
 					<div className="row">
 						<div className="offset-1 col-10">
