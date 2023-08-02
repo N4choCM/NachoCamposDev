@@ -8,157 +8,48 @@ import Atropos from "atropos/react";
 const AboutCard = ({ darkMode }) => {
 	return (
 		<>
-			{/* {!darkMode ? <hr /> : ""}
-			<h1
-				className={
-					darkMode
-						? "text-center text-white my-4"
-						: "text-center text-dark my-4"
-				}
-			>
-				About Me
-			</h1> */}
-			{/* <div className="container">
-				<div className="row">
-					<div className="offset-lg-2 col-lg-8">
-						<div
-							className={
-								darkMode
-									? "card bg-card-dark text-white"
-									: "card bg-card-light text-dark"
-							}
+			{!darkMode ? <hr /> : ""}
+
+			<div className="container">
+				<div className="row py-5 px-4">
+					<div className="offset-1 col-10 col-md-5">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit.
+						Reiciendis ipsam eaque assumenda vero tempora aspernatur
+						fugit debitis velit dignissimos doloribus, distinctio
+						magni officia, vitae eos similique voluptatum
+						consequatur est. Facilis. Lorem ipsum, dolor sit amet
+						consectetur adipisicing elit. Voluptas facilis
+						dignissimos velit! Doloribus atque error sint sit maxime
+						itaque numquam harum eaque odit quam aliquam pariatur,
+						illo quidem velit rem? Lorem ipsum dolor sit amet
+						consectetur adipisicing elit. Autem distinctio doloribus
+						quisquam enim! Similique officiis numquam alias vero
+						fugiat quo fugit rerum amet harum. Architecto delectus
+						natus doloremque inventore ipsam. Lorem ipsum dolor sit
+						amet consectetur adipisicing elit. Officia atque magni
+						facilis unde necessitatibus laboriosam quidem tenetur
+						commodi sed ad. Illum quia accusamus maxime eos quasi
+						nesciunt hic autem obcaecati?
+					</div>
+					<div className="offset-1 offset-md-0 col-10 col-md-5 my-auto">
+						<Atropos
+							activeOffset={40}
+							shadowScale={1.05}
+							shadow={false}
+							onEnter={() => console.log("Enter")}
+							onLeave={() => console.log("Leave")}
+							onRotate={(x, y) => console.log("Rotate", x, y)}
 						>
 							<img
-								src={nachoPicSm}
-								className="card-img-top d-lg-none"
-								alt="Nacho Campos Martí"
-							/>
-							<img
 								src={nachoPicLg}
-								className="d-none d-lg-block border-nacho rounded-circle w-50 mx-auto mt-5 mb-4"
+								className="border-nacho rounded-circle d-flex justify-content-center w-75 mx-auto"
 								alt="Nacho Campos Martí"
+								data-atropos-offset="-5"
 							/>
-							<hr className="d-none d-lg-block" />
-							<div className="card-body">
-								<h2 className="card-title text-center mb-3">
-									Experience
-								</h2>
-								<h5 className="mx-md-5">
-									Full Stack Developer at Dekra Digital &
-									Product Solutions (2023 - ongoing)
-								</h5>
-								<ul className="mx-md-5 mb-4">
-									<li>
-										Development of Backend Rest APIs with
-										Java/Spring Boot
-									</li>
-									<li>
-										Development of Python scripts to
-										populate Data Bases
-									</li>
-									<li>
-										Development of Thymeleaf templates to
-										establish email services
-									</li>
-									<li>
-										Development of Insomnia/Postman request
-										Collections
-									</li>
-									<li>
-										Contribution in the development of
-										Angular applications
-									</li>
-								</ul>
-								<hr />
-								<h2 className="card-title text-center mt-3 mb-3">
-									Official Background
-								</h2>
-								<ul className="mx-md-5 mb-4">
-									<li>
-										BSc in Computing Engineering at UNED
-										(2023 - ongoing)
-									</li>
-									<li>
-										CFGS in Multiplatform Apps Development
-										at Ilerna Online (2022 - 2023)
-									</li>
-									<li>
-										MA in English Studies and Multilingual
-										and Intercultural Communication at UMA
-										(2019 - 2020)
-									</li>
-									<li>
-										BA in Translation and Interpreting at
-										UMA (EN/FR/DE <> ES) (2014 - 2018)</>
-									</li>
-								</ul>
-								<hr />
-								<h2 className="card-title text-center mt-3 mb-3">
-									Certificates
-								</h2>
-								<ul className="mx-md-5">
-									<li>
-										Bootcamp in Web App Development using
-										the MERN stack - Rolling Code School
-										(2022 - 2023)
-									</li>
-									<li>
-										Spring Boot and Angular, developing apps
-										as a Full Stack Developer - Udemy (2022)
-									</li>
-								</ul>
-								<hr />
-								<h2 className="card-title text-center mt-3 mb-3">
-									Languages
-								</h2>
-								<ul className="mx-md-5">
-									<li>Spanish - Native Language</li>
-									<li>English - C1 TOEFL</li>
-									<li>German - B1 TELC</li>
-									<li>
-										French - B1 not certificated (I worked
-										in France for 1 year as a Spanish
-										teacher)
-									</li>
-								</ul>
-							</div>
-						</div>
+						</Atropos>
 					</div>
 				</div>
 			</div>
-		</> */}
-			{!darkMode ? <hr /> : ""}
-			<Atropos
-				activeOffset={40}
-				shadowScale={1.05}
-				shadow={false}
-				onEnter={() => console.log("Enter")}
-				onLeave={() => console.log("Leave")}
-				onRotate={(x, y) => console.log("Rotate", x, y)}
-			>
-				<img
-					src={nachoPicLg}
-					className="border-nacho rounded-circle d-none d-lg-flex justify-content-center mx-auto mt-5 w-25"
-					alt="Nacho Campos Martí"
-					data-atropos-offset="-5"
-				/>
-				<img
-					src={nachoPicLg}
-					className="border-nacho rounded-circle d-flex d-lg-none justify-content-center mx-auto mt-5 w-50"
-					alt="Nacho Campos Martí"
-					data-atropos-offset="-5"
-				/>
-				<h1
-					className={
-						darkMode
-							? "text-center text-white mb-4"
-							: "text-center text-dark mb-4"
-					}
-					data-atropos-offset="5"
-				>
-					About Me
-				</h1>
-			</Atropos>
 			<div className="container">
 				<div className="row">
 					<div className="offset-1 col-10">
