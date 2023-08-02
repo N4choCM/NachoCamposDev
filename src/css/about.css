@@ -52,6 +52,34 @@
     background-color: #149bab !important;
 }
 
+.bg-mongo{
+    background-color: #007632 !important;
+}
+
+.bg-express{
+    background-color: #f7df1e !important;
+}
+
+.bg-react{
+    background-color: #0fdaff !important;
+}
+
+.bg-node{
+    background-color: #80bd01 !important;
+}
+
+.bg-rolling{
+    background-color: #df2a26 !important;
+}
+
+.bg-udemy{
+    background-color: #a435f0 !important;
+}
+
+.bg-docker{
+    background-color: #2b99ee !important;
+}
+
 .atropos-inner{
     overflow: visible !important;
 }

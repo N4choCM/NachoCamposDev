@@ -212,16 +212,46 @@ const AboutCard = ({ darkMode }) => {
 										}
 									>
 										{" "}
-										<ul className="mx-md-5">
-											<li>
-												Bootcamp in Web App Development
-												using the MERN stack - Rolling
-												Code School (2022 - 2023)
+										<ul>
+											<li className="mb-3">
+												Bootcamp in Web App Development - 												<span className="badge rounded-pill bg-rolling me-2">
+													Rolling Code School</span> (2022 - 2023)
+													<div>
+												<span className="badge rounded-pill bg-mongo me-2">
+													MongoDB
+												</span>
+												<span className="badge rounded-pill bg-express me-2">
+													Express.js
+												</span>
+												<span className="badge rounded-pill bg-react me-2">
+													React
+												</span>
+												<span className="badge rounded-pill bg-node me-2">
+													Node.js
+												</span>
+
+													</div>
 											</li>
-											<li>
+											<li className="mb-3">
 												Spring Boot and Angular,
 												developing apps as a Full Stack
-												Developer - Udemy (2022)
+												Developer - 												<span className="badge rounded-pill bg-udemy me-2">
+													Udemy
+												</span> (2022)
+												<div className="mb-2">
+											<span className="badge rounded-pill bg-spring me-2">
+												Spring Boot
+											</span>
+											<span className="badge rounded-pill bg-java me-2">
+												Java
+											</span>
+											<span className="badge rounded-pill bg-angular me-2">
+												Angular
+											</span>
+											<span className="badge rounded-pill bg-docker me-2">
+												Docker
+											</span>
+										</div>
 											</li>
 										</ul>
 									</div>
@@ -253,7 +283,7 @@ const AboutCard = ({ darkMode }) => {
 										}
 									>
 										{" "}
-										<ul className="mx-md-5">
+										<ul>
 											<li>Spanish - Native Language</li>
 											<li>English - C1 TOEFL</li>
 											<li>German - B1 TELC</li>
