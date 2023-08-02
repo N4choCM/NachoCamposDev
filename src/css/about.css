@@ -1,11 +1,55 @@
-.bg-card-dark{
+.bg-accordion-dark{
     background-color: #6d6d6d !important;
 }
 
-.bg-card-light{
+.bg-accordion-light{
     background-color: #f2f2f2 !important;
 }
 
 .border-nacho{
     border: 1px solid #6d6d6d !important;
 }
+
+.bg-accordion-header:hover
+{
+    background-color: #5f42b0 !important;
+}
+
+.bg-accordion-header
+{
+    background-color: #895ff9 !important;
+}
+
+.accordion-button{
+    box-shadow: none !important;
+}
+
+.bg-spring{
+    background-color: #6db33f !important;
+}
+
+.bg-java{
+    background-color: #ee272c !important;
+}
+
+.bg-python{
+    background-color: #ffc92f !important;
+}
+
+.bg-angular{
+    background-color: #dd0031 !important;
+}
+
+.bg-uma{
+    background-color: #1a3256 !important;
+}
+
+.bg-uned{
+    background-color: #00533f !important;
+}
+
+.bg-ilerna{
+    background-color: #149bab !important;
+}
+
+/* box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset; */
