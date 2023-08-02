@@ -8,8 +8,6 @@ import Atropos from "atropos/react";
 const AboutCard = ({ darkMode }) => {
 	return (
 		<>
-			{!darkMode ? <hr /> : ""}
-
 			<div className="container">
 				<div className="row py-5 px-4">
 					<div className="offset-1 col-10 col-md-5">
