@@ -1,50 +1,108 @@
 import PropTypes from "prop-types";
-// import nachoPicSm from "../assets/nachoPic-sm.png";
 import nachoPicLg from "../assets/nachoPic-lg.png";
 import "../css/about.css";
 import "atropos/css";
-// import Atropos from "atropos/react";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
+import masterTitle from "../assets/MATitle.jpg";
+import bachelorTitle from "../assets/BATitle.jpg";
+import rollingTitle from "../assets/RollingTitle.png";
+import angularSpringFullStackTitle from "../assets/AngularSpringFullStackTitle.jpg";
+import toeflTitle from "../assets/TOEFLTitle.jpg";
+import germanTelcTitle from "../assets/GermanTELCTitle.jpg";
 
 const AboutCard = ({ darkMode }) => {
+	const certificatesSwal = withReactContent(Swal);
+	const handleCertificates = (title, e) => {
+		e.preventDefault();
+		let certificate = "";
+		switch (title) {
+			case "master":
+				certificate = masterTitle;
+				break;
+			case "bachelor":
+				certificate = bachelorTitle;
+				break;
+			case "rolling":
+				certificate = rollingTitle;
+				break;
+			case "angularSpringFullStack":
+				certificate = angularSpringFullStackTitle;
+				break;
+			case "toefl":
+				certificate = toeflTitle;
+				break;
+			case "germanTelc":
+				certificate = germanTelcTitle;
+				break;
+		}
+		certificatesSwal.fire({
+			imageUrl: certificate,
+			showCloseButton: true,
+			showConfirmButton: false,
+		});
+	};
+
 	return (
 		<>
 			<div className="container">
 				<div className="row py-5 px-4">
-					<div className="offset-1 col-10 col-md-5">
+				<div className="offset-1 offset-md-0 col-10 mx-md-auto mt-2 mb-4 d-lg-none">
+						<img
+							src={nachoPicLg}
+							className={
+								darkMode
+									? "border-nacho rounded-circle d-flex justify-content-center w-75 mx-auto custom-shadow-pic-dark"
+									: "border-nacho rounded-circle d-flex justify-content-center w-75 mx-auto custom-shadow-pic-light"
+							}
+							alt="Nacho Campos Martí"
+							data-atropos-offset="-5"
+						/>
+					</div>
+					<div className="offset-1 col-10 col-lg-5">
 						<p className="text-justify-both">
-						As a passionate full-stack developer, I find immense joy in programming and take great pride in my work. My primary focus lies in backend development, where I thrive in crafting efficient and scalable solutions. However, my insatiable appetite for learning leads me to embrace new challenges across both frontend and backend domains. With a strong command over Java and Spring Boot, as well as proficiency in React, I'm well-equipped to build robust and dynamic applications. Additionally, my knowledge extends to Python, Angular, Kotlin, and C#, allowing me to adapt and innovate in diverse tech environments. I relish the opportunity to tackle exciting projects and continue growing every day. Let's create something amazing together!
-
+							As a passionate full-stack developer, I find immense
+							joy in programming and take great pride in my work.
+							My primary focus lies in backend development, where
+							I thrive in crafting efficient and scalable
+							solutions. However, my insatiable appetite for
+							learning leads me to embrace new challenges across
+							both frontend and backend domains. With a strong
+							command over Java and Spring Boot, as well as
+							proficiency in React, I&apos;m well-equipped to build
+							robust and dynamic applications. Additionally, my
+							knowledge extends to Python, Angular, Kotlin, and
+							C#, allowing me to adapt and innovate in diverse
+							tech environments. I relish the opportunity to
+							tackle exciting projects and continue growing every
+							day. Let&apos;s create something amazing together!
 						</p>
 					</div>
-					<div className="offset-1 offset-md-0 col-10 col-md-5 my-auto">
-					<img
-								src={nachoPicLg}
-								className="border-nacho rounded-circle d-flex justify-content-center w-75 mx-auto custom-shadow-pic"
-								alt="Nacho Campos Martí"
-								data-atropos-offset="-5"
-							/>
-						{/* <Atropos
-							activeOffset={40}
-							shadowScale={1.05}
-							shadow={false}
-							onEnter={() => console.log("Enter")}
-							onLeave={() => console.log("Leave")}
-							onRotate={(x, y) => console.log("Rotate", x, y)}
-						>
-							<img
-								src={nachoPicLg}
-								className="border-nacho rounded-circle d-flex justify-content-center w-75 mx-auto"
-								alt="Nacho Campos Martí"
-								data-atropos-offset="-5"
-							/>
-						</Atropos> */}
+					<div className="offset-1 offset-md-0 col-10 col-md-5 my-auto d-none d-lg-block">
+						<img
+							src={nachoPicLg}
+							className={
+								darkMode
+									? "border-nacho rounded-circle d-flex justify-content-center w-75 mx-auto custom-shadow-pic-dark"
+									: "border-nacho rounded-circle d-flex justify-content-center w-75 mx-auto custom-shadow-pic-light"
+							}
+							alt="Nacho Campos Martí"
+							data-atropos-offset="-5"
+						/>
 					</div>
 				</div>
 			</div>
 			<div className="container">
 				<div className="row">
 					<div className="offset-1 col-10">
-						<div className="accordion custom-shadow" id="accordionExample">
+						<div
+							className={
+								darkMode
+									? "accordion custom-shadow-dark"
+									: "accordion custom-shadow-light"
+							}
+							id="accordionExample"
+						>
 							<div className="accordion-item">
 								<h2 className="accordion-header">
 									<button
@@ -70,18 +128,26 @@ const AboutCard = ({ darkMode }) => {
 												: "accordion-body bg-accordion-light text-dark"
 										}
 									>
-										<h5>
+										<h5 className="text-justify-both">
 											Full Stack Developer at Dekra
 											Digital & Product Solutions (2023 -
 											ongoing)
 										</h5>
-										<div className="mb-2">
+										<div className="mb-2 text-center text-md-start">
 											<span className="badge rounded-pill bg-spring me-2">
 												Spring Boot
 											</span>
 											<span className="badge rounded-pill bg-java me-2">
 												Java
 											</span>
+											<span className="badge rounded-pill bg-python me-2 d-none d-md-inline">
+												Python
+											</span>
+											<span className="badge rounded-pill bg-angular me-2 d-none d-md-inline">
+												Angular
+											</span>
+										</div>
+										<div className="mb-2 text-center text-md-start d-md-none">
 											<span className="badge rounded-pill bg-python me-2">
 												Python
 											</span>
@@ -89,7 +155,7 @@ const AboutCard = ({ darkMode }) => {
 												Angular
 											</span>
 										</div>
-										<ul>
+										<ul className="text-justify-both">
 											<li>
 												Development of Backend Rest APIs
 												with Java/Spring Boot
@@ -141,7 +207,7 @@ const AboutCard = ({ darkMode }) => {
 										}
 									>
 										{" "}
-										<ul>
+										<ul className="text-justify-both">
 											<li>
 												BSc in Computing Engineering -{" "}
 												<span className="badge rounded-pill bg-uned me-2">
@@ -159,21 +225,52 @@ const AboutCard = ({ darkMode }) => {
 												(2022 - 2023)
 											</li>
 											<li>
-												MA in English Studies and
-												Multilingual and Intercultural
-												Communication -{" "}
-												<span className="badge rounded-pill bg-uma me-2">
-													UMA
-												</span>{" "}
-												(2019 - 2020)
+												<a
+													href=""
+													onClick={(e) =>
+														handleCertificates(
+															"master",
+															e
+														)
+													}
+													className={
+														darkMode
+															? "a-dark"
+															: "a-light"
+													}
+												>
+													MA in English Studies and
+													Multilingual and
+													Intercultural Communication
+													-{" "}
+													<span className="badge rounded-pill bg-uma me-2">
+														UMA
+													</span>{" "}
+													(2019 - 2020)
+												</a>
 											</li>
 											<li>
-												BA in Translation and
-												Interpreting (EN/FR/DE/ES) -{" "}
-												<span className="badge rounded-pill bg-uma me-2">
-													UMA
-												</span>{" "}
-												(2014 - 2018)
+												<a
+													href=""
+													onClick={(e) =>
+														handleCertificates(
+															"bachelor",
+															e
+														)
+													}
+													className={
+														darkMode
+															? "a-dark"
+															: "a-light"
+													}
+												>
+													BA in Translation and
+													Interpreting (EN/FR/DE/ES) -{" "}
+													<span className="badge rounded-pill bg-uma me-2">
+														UMA
+													</span>{" "}
+													(2014 - 2018)
+												</a>
 											</li>
 										</ul>
 									</div>
@@ -205,46 +302,97 @@ const AboutCard = ({ darkMode }) => {
 										}
 									>
 										{" "}
-										<ul>
+										<ul className="text-justify-both">
 											<li className="mb-3">
-												Bootcamp in Web App Development - 												<span className="badge rounded-pill bg-rolling me-2">
-													Rolling Code School</span> (2022 - 2023)
-													<div>
-												<span className="badge rounded-pill bg-mongo me-2">
-													MongoDB
-												</span>
-												<span className="badge rounded-pill bg-express me-2">
-													Express.js
-												</span>
-												<span className="badge rounded-pill bg-react me-2">
-													React
-												</span>
-												<span className="badge rounded-pill bg-node me-2">
-													Node.js
-												</span>
-
+												<a
+													href=""
+													onClick={(e) =>
+														handleCertificates(
+															"rolling",
+															e
+														)
+													}
+													className={
+														darkMode
+															? "a-dark"
+															: "a-light"
+													}
+												>
+													Bootcamp in Web App
+													Development -{" "}
+													<span className="badge rounded-pill bg-rolling me-2">
+														Rolling Code School
+													</span>{" "}
+													(2022 - 2023)
+													<div className="text-center text-md-start">
+														<span className="badge rounded-pill bg-mongo me-2">
+															MongoDB
+														</span>
+														<span className="badge rounded-pill bg-express me-2">
+															Express.js
+														</span>
+														<span className="badge rounded-pill bg-react me-2 d-none d-md-inline">
+															React
+														</span>
+														<span className="badge rounded-pill bg-node me-2 d-none d-md-inline">
+															Node.js
+														</span>
 													</div>
+													<div className="text-center text-md-start d-md-none">
+														<span className="badge rounded-pill bg-react me-2">
+															React
+														</span>
+														<span className="badge rounded-pill bg-node me-2">
+															Node.js
+														</span>
+													</div>
+												</a>
 											</li>
 											<li className="mb-3">
-												Spring Boot and Angular,
-												developing apps as a Full Stack
-												Developer - 												<span className="badge rounded-pill bg-udemy me-2">
-													Udemy
-												</span> (2022)
-												<div className="mb-2">
-											<span className="badge rounded-pill bg-spring me-2">
-												Spring Boot
-											</span>
-											<span className="badge rounded-pill bg-java me-2">
-												Java
-											</span>
-											<span className="badge rounded-pill bg-angular me-2">
-												Angular
-											</span>
-											<span className="badge rounded-pill bg-docker me-2">
-												Docker
-											</span>
-										</div>
+												<a
+													href=""
+													onClick={(e) =>
+														handleCertificates(
+															"angularSpringFullStack",
+															e
+														)
+													}
+													className={
+														darkMode
+															? "a-dark"
+															: "a-light"
+													}
+												>
+													Spring Boot and Angular,
+													developing apps as a Full
+													Stack Developer -{" "}
+													<span className="badge rounded-pill bg-udemy me-2">
+														Udemy
+													</span>{" "}
+													(2022)
+													<div className="mb-2 text-center text-md-start">
+														<span className="badge rounded-pill bg-spring me-2">
+															Spring Boot
+														</span>
+														<span className="badge rounded-pill bg-java me-2">
+															Java
+														</span>
+														<span className="badge rounded-pill bg-angular me-2 d-none d-md-inline">
+															Angular
+														</span>
+														<span className="badge rounded-pill bg-docker me-2 d-none d-md-inline">
+															Docker
+														</span>
+													</div>
+													<div className="mb-2 text-center d-md-none">
+														<span className="badge rounded-pill bg-angular me-2">
+															Angular
+														</span>
+														<span className="badge rounded-pill bg-docker me-2">
+															Docker
+														</span>
+													</div>
+												</a>
 											</li>
 										</ul>
 									</div>
@@ -277,13 +425,141 @@ const AboutCard = ({ darkMode }) => {
 									>
 										{" "}
 										<ul>
-											<li>Spanish - <span><i className="fa fa-star mx-2" aria-hidden="true"></i><i className="fa fa-star me-2" aria-hidden="true"></i><i className="fa fa-star me-2" aria-hidden="true"></i><i className="fa fa-star me-2" aria-hidden="true"></i><i className="fa fa-star me-2" aria-hidden="true"></i></span> (Native Language)</li>
-											<li>English &nbsp;- <span><i className="fa fa-star mx-2" aria-hidden="true"></i><i className="fa fa-star me-2" aria-hidden="true"></i><i className="fa fa-star me-2" aria-hidden="true"></i><i className="fa fa-star me-2" aria-hidden="true"></i><i className="fa fa-star-half-o me-2" aria-hidden="true"></i></span>(C1 TOEFL)</li>
-											<li>German - <span><i className="fa fa-star mx-2" aria-hidden="true"></i><i className="fa fa-star me-2" aria-hidden="true"></i><i className="fa fa-star me-2" aria-hidden="true"></i><i className="fa fa-star-o me-2" aria-hidden="true"></i><i className="fa fa-star-o me-2" aria-hidden="true"></i></span> (B1 TELC)</li>
 											<li>
-												French &nbsp;&nbsp;- <span><i className="fa fa-star mx-2" aria-hidden="true"></i><i className="fa fa-star me-2" aria-hidden="true"></i><i className="fa fa-star me-2" aria-hidden="true"></i><i className="fa fa-star-o me-2" aria-hidden="true"></i><i className="fa fa-star-o me-2" aria-hidden="true"></i>(B1 not certificated, but I
-												worked in France for 1 year as a
-												Spanish teacher)</span>
+												Spanish -{" "}
+												<span>
+													<i
+														className="fa fa-star mx-2"
+														aria-hidden="true"
+													></i>
+													<i
+														className="fa fa-star me-2"
+														aria-hidden="true"
+													></i>
+													<i
+														className="fa fa-star me-2"
+														aria-hidden="true"
+													></i>
+													<i
+														className="fa fa-star me-2"
+														aria-hidden="true"
+													></i>
+													<i
+														className="fa fa-star me-2"
+														aria-hidden="true"
+													></i>
+												</span>{" "}
+												(Native Language)
+											</li>
+											<li>
+												<a
+													href=""
+													onClick={(e) =>
+														handleCertificates(
+															"toefl",
+															e
+														)
+													}
+													className={
+														darkMode
+															? "a-dark"
+															: "a-light"
+													}
+												>
+													English &nbsp;-{" "}
+													<span>
+														<i
+															className="fa fa-star mx-2"
+															aria-hidden="true"
+														></i>
+														<i
+															className="fa fa-star me-2"
+															aria-hidden="true"
+														></i>
+														<i
+															className="fa fa-star me-2"
+															aria-hidden="true"
+														></i>
+														<i
+															className="fa fa-star me-2"
+															aria-hidden="true"
+														></i>
+														<i
+															className="fa fa-star-half-o me-2"
+															aria-hidden="true"
+														></i>
+													</span>
+													(C1 TOEFL)
+												</a>
+											</li>
+											<li>
+												<a
+													href=""
+													onClick={(e) =>
+														handleCertificates(
+															"germanTelc",
+															e
+														)
+													}
+													className={
+														darkMode
+															? "a-dark"
+															: "a-light"
+													}
+												>
+													German -{" "}
+													<span>
+														<i
+															className="fa fa-star mx-2"
+															aria-hidden="true"
+														></i>
+														<i
+															className="fa fa-star me-2"
+															aria-hidden="true"
+														></i>
+														<i
+															className="fa fa-star me-2"
+															aria-hidden="true"
+														></i>
+														<i
+															className="fa fa-star-o me-2"
+															aria-hidden="true"
+														></i>
+														<i
+															className="fa fa-star-o me-2"
+															aria-hidden="true"
+														></i>
+													</span>{" "}
+													(B1 TELC)
+												</a>
+											</li>
+											<li>
+												French &nbsp;&nbsp;-{" "}
+												<span>
+													<i
+														className="fa fa-star mx-2"
+														aria-hidden="true"
+													></i>
+													<i
+														className="fa fa-star me-2"
+														aria-hidden="true"
+													></i>
+													<i
+														className="fa fa-star me-2"
+														aria-hidden="true"
+													></i>
+													<i
+														className="fa fa-star-o me-2"
+														aria-hidden="true"
+													></i>
+													<i
+														className="fa fa-star-o me-2"
+														aria-hidden="true"
+													></i>
+													(B1 not certificated, but I
+													worked in France for 1 year
+													as a Spanish teacher)
+												</span>
 											</li>
 										</ul>
 									</div>
