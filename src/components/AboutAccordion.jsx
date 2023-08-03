@@ -11,7 +11,7 @@ import angularSpringFullStackTitle from "../assets/AngularSpringFullStackTitle.j
 import toeflTitle from "../assets/TOEFLTitle.jpg";
 import germanTelcTitle from "../assets/GermanTELCTitle.jpg";
 
-const AboutCard = ({ darkMode }) => {
+const AboutAccordion = ({ darkMode }) => {
 	const certificatesSwal = withReactContent(Swal);
 	const handleCertificates = (title, e) => {
 		e.preventDefault();
@@ -573,8 +573,8 @@ const AboutCard = ({ darkMode }) => {
 	);
 };
 
-AboutCard.propTypes = {
+AboutAccordion.propTypes = {
 	darkMode: PropTypes.bool.isRequired,
 };
 
-export default AboutCard;
+export default AboutAccordion;
