@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import nachoPicLg from "../assets/nachoPic-lg.png";
 import "../css/about.css";
 import "atropos/css";
-import Atropos from "atropos/react";
+// import Atropos from "atropos/react";
 
 const AboutCard = ({ darkMode }) => {
 	return (
@@ -11,26 +11,19 @@ const AboutCard = ({ darkMode }) => {
 			<div className="container">
 				<div className="row py-5 px-4">
 					<div className="offset-1 col-10 col-md-5">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit.
-						Reiciendis ipsam eaque assumenda vero tempora aspernatur
-						fugit debitis velit dignissimos doloribus, distinctio
-						magni officia, vitae eos similique voluptatum
-						consequatur est. Facilis. Lorem ipsum, dolor sit amet
-						consectetur adipisicing elit. Voluptas facilis
-						dignissimos velit! Doloribus atque error sint sit maxime
-						itaque numquam harum eaque odit quam aliquam pariatur,
-						illo quidem velit rem? Lorem ipsum dolor sit amet
-						consectetur adipisicing elit. Autem distinctio doloribus
-						quisquam enim! Similique officiis numquam alias vero
-						fugiat quo fugit rerum amet harum. Architecto delectus
-						natus doloremque inventore ipsam. Lorem ipsum dolor sit
-						amet consectetur adipisicing elit. Officia atque magni
-						facilis unde necessitatibus laboriosam quidem tenetur
-						commodi sed ad. Illum quia accusamus maxime eos quasi
-						nesciunt hic autem obcaecati?
+						<p className="text-justify-both">
+						As a passionate full-stack developer, I find immense joy in programming and take great pride in my work. My primary focus lies in backend development, where I thrive in crafting efficient and scalable solutions. However, my insatiable appetite for learning leads me to embrace new challenges across both frontend and backend domains. With a strong command over Java and Spring Boot, as well as proficiency in React, I'm well-equipped to build robust and dynamic applications. Additionally, my knowledge extends to Python, Angular, Kotlin, and C#, allowing me to adapt and innovate in diverse tech environments. I relish the opportunity to tackle exciting projects and continue growing every day. Let's create something amazing together!
+
+						</p>
 					</div>
 					<div className="offset-1 offset-md-0 col-10 col-md-5 my-auto">
-						<Atropos
+					<img
+								src={nachoPicLg}
+								className="border-nacho rounded-circle d-flex justify-content-center w-75 mx-auto custom-shadow-pic"
+								alt="Nacho Campos Martí"
+								data-atropos-offset="-5"
+							/>
+						{/* <Atropos
 							activeOffset={40}
 							shadowScale={1.05}
 							shadow={false}
@@ -44,14 +37,14 @@ const AboutCard = ({ darkMode }) => {
 								alt="Nacho Campos Martí"
 								data-atropos-offset="-5"
 							/>
-						</Atropos>
+						</Atropos> */}
 					</div>
 				</div>
 			</div>
 			<div className="container">
 				<div className="row">
 					<div className="offset-1 col-10">
-						<div className="accordion" id="accordionExample">
+						<div className="accordion custom-shadow" id="accordionExample">
 							<div className="accordion-item">
 								<h2 className="accordion-header">
 									<button
@@ -284,13 +277,13 @@ const AboutCard = ({ darkMode }) => {
 									>
 										{" "}
 										<ul>
-											<li>Spanish - Native Language</li>
-											<li>English - C1 TOEFL</li>
-											<li>German - B1 TELC</li>
+											<li>Spanish - <span><i className="fa fa-star mx-2" aria-hidden="true"></i><i className="fa fa-star me-2" aria-hidden="true"></i><i className="fa fa-star me-2" aria-hidden="true"></i><i className="fa fa-star me-2" aria-hidden="true"></i><i className="fa fa-star me-2" aria-hidden="true"></i></span> (Native Language)</li>
+											<li>English &nbsp;- <span><i className="fa fa-star mx-2" aria-hidden="true"></i><i className="fa fa-star me-2" aria-hidden="true"></i><i className="fa fa-star me-2" aria-hidden="true"></i><i className="fa fa-star me-2" aria-hidden="true"></i><i className="fa fa-star-half-o me-2" aria-hidden="true"></i></span>(C1 TOEFL)</li>
+											<li>German - <span><i className="fa fa-star mx-2" aria-hidden="true"></i><i className="fa fa-star me-2" aria-hidden="true"></i><i className="fa fa-star me-2" aria-hidden="true"></i><i className="fa fa-star-o me-2" aria-hidden="true"></i><i className="fa fa-star-o me-2" aria-hidden="true"></i></span> (B1 TELC)</li>
 											<li>
-												French - B1 not certificated (I
+												French &nbsp;&nbsp;- <span><i className="fa fa-star mx-2" aria-hidden="true"></i><i className="fa fa-star me-2" aria-hidden="true"></i><i className="fa fa-star me-2" aria-hidden="true"></i><i className="fa fa-star-o me-2" aria-hidden="true"></i><i className="fa fa-star-o me-2" aria-hidden="true"></i>(B1 not certificated, but I
 												worked in France for 1 year as a
-												Spanish teacher)
+												Spanish teacher)</span>
 											</li>
 										</ul>
 									</div>
