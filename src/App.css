@@ -32,15 +32,13 @@ footer {
 	color: #4c4c6d;
 }
 
-/* Estilos para el modo oscuro */
 body.app-mode-dark {
 	background-color: #333;
-	color: white; /* Por ejemplo, cambia el color del texto para que sea visible en fondo oscuro */
-  }
+	color: white; 
+}
   
-  /* Estilos para el modo claro */
   body.app-mode-light {
-	background-color: white;
-	color: black; /* Por ejemplo, cambia el color del texto para que sea visible en fondo claro */
+	background-color: #F0F0F0;
+	color: black;
   }
   

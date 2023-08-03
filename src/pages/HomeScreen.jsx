@@ -1,9 +1,13 @@
+import AboutAccordion from '../components/AboutAccordion';
 import Banner from '../components/Banner'
 import PropTypes from 'prop-types';
 
 const HomeScreen = ({changeDarkMode, darkMode}) => {
   return (
-    <Banner changeDarkMode={changeDarkMode} darkMode={darkMode} />
+    <>
+      <Banner changeDarkMode={changeDarkMode} darkMode={darkMode} />
+      <AboutAccordion changeDarkMode={changeDarkMode} darkMode={darkMode} />
+    </>
   )
 }
 

@@ -1,0 +1,129 @@
+.bg-accordion-dark {
+	background-color: #6d6d6d !important;
+}
+
+.bg-accordion-light {
+	background-color: #f5f5f5 !important;
+}
+
+.border-nacho {
+	border: 1px solid #6d6d6d !important;
+}
+
+.bg-accordion-header:hover {
+	background-color: #5f42b0 !important;
+}
+
+.bg-accordion-header {
+	background-color: #895ff9 !important;
+}
+
+.accordion-button {
+	box-shadow: none !important;
+}
+
+.bg-spring {
+	background-color: #6db33f !important;
+}
+
+.bg-java {
+	background-color: #ee272c !important;
+}
+
+.bg-python {
+	background-color: #ffc92f !important;
+}
+
+.bg-angular {
+	background-color: #dd0031 !important;
+}
+
+.bg-uma {
+	background-color: #1a3256 !important;
+}
+
+.bg-uned {
+	background-color: #00533f !important;
+}
+
+.bg-ilerna {
+	background-color: #149bab !important;
+}
+
+.bg-mongo {
+	background-color: #007632 !important;
+}
+
+.bg-express {
+	background-color: #f7df1e !important;
+}
+
+.bg-react {
+	background-color: #0fdaff !important;
+}
+
+.bg-node {
+	background-color: #80bd01 !important;
+}
+
+.bg-rolling {
+	background-color: #df2a26 !important;
+}
+
+.bg-udemy {
+	background-color: #a435f0 !important;
+}
+
+.bg-docker {
+	background-color: #2b99ee !important;
+}
+
+.custom-shadow-light {
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
+}
+
+.custom-shadow-dark {
+	box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px !important;
+}
+
+.custom-shadow-pic-light {
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
+	transition: transform 0.3s ease;
+	object-fit: cover;
+}
+
+.custom-shadow-pic-dark {
+	box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px !important;
+	transition: transform 0.3s ease;
+	object-fit: cover;
+}
+
+.custom-shadow-pic-light:hover,
+.custom-shadow-pic-dark:hover {
+	transform: scale(1.1);
+}
+
+.text-justify-both {
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+.a-dark {
+	text-decoration: none !important;
+	color: white !important;
+}
+
+.a-dark:hover {
+	text-decoration: none !important;
+	color: #ffc92f !important;
+}
+
+.a-light {
+	text-decoration: none !important;
+	color: black !important;
+}
+
+.a-light:hover {
+	text-decoration: none !important;
+	color: #ffbb00 !important;
+}
