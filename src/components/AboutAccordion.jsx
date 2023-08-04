@@ -87,7 +87,6 @@ const AboutAccordion = ({ darkMode }) => {
 									: "border-nacho rounded-circle d-flex justify-content-center w-75 mx-auto custom-shadow-pic-light"
 							}
 							alt="Nacho Campos Martí"
-							data-atropos-offset="-5"
 						/>
 					</div>
 				</div>
@@ -146,6 +145,9 @@ const AboutAccordion = ({ darkMode }) => {
 											<span className="badge rounded-pill bg-angular me-2 d-none d-md-inline">
 												Angular
 											</span>
+											<span className="badge rounded-pill bg-sql me-2 d-none d-md-inline">
+												SQL
+											</span>
 										</div>
 										<div className="mb-2 text-center text-md-start d-md-none">
 											<span className="badge rounded-pill bg-python me-2">
@@ -153,6 +155,9 @@ const AboutAccordion = ({ darkMode }) => {
 											</span>
 											<span className="badge rounded-pill bg-angular me-2">
 												Angular
+											</span>
+											<span className="badge rounded-pill bg-sql me-2">
+												SQL
 											</span>
 										</div>
 										<ul className="text-justify-both">
@@ -383,6 +388,9 @@ const AboutAccordion = ({ darkMode }) => {
 														<span className="badge rounded-pill bg-docker me-2 d-none d-md-inline">
 															Docker
 														</span>
+														<span className="badge rounded-pill bg-sql me-2 d-none d-md-inline">
+															SQL
+														</span>
 													</div>
 													<div className="mb-2 text-center d-md-none">
 														<span className="badge rounded-pill bg-angular me-2">
@@ -390,6 +398,9 @@ const AboutAccordion = ({ darkMode }) => {
 														</span>
 														<span className="badge rounded-pill bg-docker me-2">
 															Docker
+														</span>
+														<span className="badge rounded-pill bg-sql me-2">
+															SQL
 														</span>
 													</div>
 												</a>
