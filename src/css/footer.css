@@ -22,3 +22,7 @@
 .whatsapp:hover {
     color: #4ecb5c !important;
 }
+
+.img-logo-white{
+    filter: contrast(0) brightness(10);
+  }
