@@ -62,8 +62,8 @@ const Banner = ({ darkMode }) => {
 						<h5
 							className={
 								darkMode
-									? "text-white text-center writing-machine"
-									: "text-dark text-center writing-machine"
+									? "text-white text-center writing-machine-blink"
+									: "text-dark text-center writing-machine-blink"
 							}
 						>
 							and I develop software solutions.
