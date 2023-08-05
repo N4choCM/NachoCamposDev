@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import { Routes, Route } from "react-router-dom";
 import ErrorScreen from "../pages/ErrorScreen";
 import HomeScreen from "../pages/HomeScreen";
+import PropTypes from "prop-types";
 
 const MainRoutes = ({changeDarkMode, darkMode}) => {
 		return (
@@ -12,9 +13,14 @@ const MainRoutes = ({changeDarkMode, darkMode}) => {
 					<Route path="/" element={<HomeScreen changeDarkMode={changeDarkMode} darkMode={darkMode}/>} />
 					<Route path="*" element={<ErrorScreen changeDarkMode={changeDarkMode} darkMode={darkMode}/>} />
 				</Routes>
-				<Footer />
+				<Footer changeDarkMode={changeDarkMode} darkMode={darkMode}/>
 			</>
 		);
 }
+
+MainRoutes.propTypes = {
+	darkMode: PropTypes.bool.isRequired,
+	changeDarkMode: PropTypes.func.isRequired
+};
 
 export default MainRoutes;
