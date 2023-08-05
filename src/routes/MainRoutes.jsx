@@ -5,21 +5,22 @@ import ErrorScreen from "../pages/ErrorScreen";
 import HomeScreen from "../pages/HomeScreen";
 import PropTypes from "prop-types";
 
-const MainRoutes = ({darkMode}) => {
+const MainRoutes = ({changeDarkMode, darkMode}) => {
 		return (
 			<>
-				<Navbar darkMode={darkMode}/>
+				<Navbar changeDarkMode={changeDarkMode} darkMode={darkMode}/>
 				<Routes>
-					<Route path="/" element={<HomeScreen darkMode={darkMode}/>} />
-					<Route path="*" element={<ErrorScreen darkMode={darkMode}/>} />
+					<Route path="/" element={<HomeScreen changeDarkMode={changeDarkMode} darkMode={darkMode}/>} />
+					<Route path="*" element={<ErrorScreen changeDarkMode={changeDarkMode} darkMode={darkMode}/>} />
 				</Routes>
-				<Footer darkMode={darkMode}/>
+				<Footer changeDarkMode={changeDarkMode} darkMode={darkMode}/>
 			</>
 		);
 }
 
 MainRoutes.propTypes = {
 	darkMode: PropTypes.bool.isRequired,
+	changeDarkMode: PropTypes.func.isRequired
 };
 
 export default MainRoutes;
