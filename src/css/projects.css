@@ -27,3 +27,7 @@
     object-fit: cover;
     height: 35vh;
 }
+
+.img-custom-filter{
+	filter: grayscale(0%) !important;
+}
