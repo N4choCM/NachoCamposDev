@@ -8,7 +8,7 @@ const HomeScreen = ({changeDarkMode, darkMode}) => {
     <>
       <Banner changeDarkMode={changeDarkMode} darkMode={darkMode} />
       <AboutAccordion changeDarkMode={changeDarkMode} darkMode={darkMode} />
-      <ProjectCards />
+      <ProjectCards changeDarkMode={changeDarkMode} darkMode={darkMode} />
     </>
   )
 }
