@@ -31,3 +31,42 @@
 .img-custom-filter{
 	filter: grayscale(0%) !important;
 }
+
+.bg-html {
+	background-color: #e5532d !important;
+}
+
+.bg-css {
+	background-color: #2d53e5 !important;
+}
+
+.bg-js {
+	background-color: #efd81d !important;
+}
+
+.bg-mongo {
+	background-color: #007632 !important;
+}
+
+.bg-express {
+	background-color: #f7df1e !important;
+}
+
+.bg-react {
+	background-color: #0fdaff !important;
+}
+
+.bg-node {
+	background-color: #80bd01 !important;
+}
+
+.social-disabled {
+	pointer-events: none !important;
+	cursor: none !important;
+	color: #dddddd !important;
+}
+
+.text-justify-both {
+	text-align: justify;
+	text-justify: inter-word;
+}

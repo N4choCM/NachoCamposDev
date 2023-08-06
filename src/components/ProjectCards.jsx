@@ -1,6 +1,8 @@
 import PropTypes from "prop-types";
 import "../css/projects.css";
 import { Link } from "react-router-dom";
+import shadowbanePic from "../assets/shadowbane.jpg";
+import rollingEatsPic from "../assets/rollingEats.jpg";
 
 const ProjectCards = ({ darkMode }) => {
 	return (
@@ -25,9 +27,9 @@ const ProjectCards = ({ darkMode }) => {
 							}
 						>
 							<img
-								src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8N0tUijh_HHnvvTSUA-vNph2IuwTKWUgoYg&usqp=CAU"
+								src={shadowbanePic}
 								className="card-img-top img-custom-filter"
-								alt="..."
+								alt="Shadowbane main screen"
 							/>
 							<div
 								className={
@@ -39,26 +41,35 @@ const ProjectCards = ({ darkMode }) => {
 								<h5
 									className={
 										darkMode
-											? "card-title text-white"
-											: "card-title text-dark"
+											? "card-title text-white mb-0"
+											: "card-title text-dark mb-0"
 									}
 								>
 									Shadowbane
 								</h5>
+								<div className="mb-2">
+									<span className="badge rounded-pill bg-html me-2">
+												HTML
+											</span>
+											<span className="badge rounded-pill bg-css me-2">
+												CSS
+											</span>
+											<span className="badge rounded-pill bg-js me-2">
+												JS
+											</span>
+								</div>
 								<p
 									className={
 										darkMode
-											? "card-text text-white"
-											: "card-text text-dark"
+											? "card-text text-white text-justify-both"
+											: "card-text text-dark text-justify-both"
 									}
 								>
-									Some quick example text to build on the card
-									title and make up the bulk of the card's
-									content.
+									In Shadowbane, a thrilling JS vanilla videogame, embark on a daring quest to escape a perilous dungeon teeming with foes. Race against time, locate the key, and secure your freedom!
 								</p>
 								<div className="d-flex justify-content-end">
 									<Link
-										to="https://github.com/N4choCM"
+										to="https://github.com/N4choCM/shadowbane"
 										className="text-white social-hover me-3"
 										target="_blank"
 									>
@@ -73,14 +84,14 @@ const ProjectCards = ({ darkMode }) => {
 									</Link>
 									<Link
 										to="https://github.com/N4choCM"
-										className="text-white social-hover"
+										className="text-white social-disabled"
 										target="_blank"
 									>
 										<i
 											className={
 												darkMode
-													? "fa fa-link fa-2x text-white social-hover"
-													: "fa fa-link fa-2x text-dark social-hover"
+													? "fa fa-link fa-2x social-disabled"
+													: "fa fa-link fa-2x social-disabled"
 											}
 											aria-hidden="true"
 										></i>
@@ -98,9 +109,9 @@ const ProjectCards = ({ darkMode }) => {
 							}
 						>
 							<img
-								src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8N0tUijh_HHnvvTSUA-vNph2IuwTKWUgoYg&usqp=CAU"
+								src={rollingEatsPic}
 								className="card-img-top img-custom-filter"
-								alt="..."
+								alt="Rolling Eats main screen"
 							/>
 							<div
 								className={
@@ -112,26 +123,38 @@ const ProjectCards = ({ darkMode }) => {
 								<h5
 									className={
 										darkMode
-											? "card-title text-white"
-											: "card-title text-dark"
+											? "card-title text-white mb-0"
+											: "card-title text-dark mb-0"
 									}
 								>
-									Shadowbane
+									Rolling Eats
 								</h5>
+								<div className="mb-2">
+									<span className="badge rounded-pill bg-mongo me-2">
+												MongoDB
+											</span>
+											<span className="badge rounded-pill bg-express me-2">
+												Express.js
+											</span>
+											<span className="badge rounded-pill bg-react me-2">
+												React
+											</span>
+											<span className="badge rounded-pill bg-node me-2">
+												Node.js
+											</span>
+								</div>
 								<p
 									className={
 										darkMode
-											? "card-text text-white"
-											: "card-text text-dark"
+											? "card-text text-white text-justify-both"
+											: "card-text text-dark text-justify-both"
 									}
 								>
-									Some quick example text to build on the card
-									title and make up the bulk of the card's
-									content.
+									Rolling Code School Bootcamp&apos;s final project: A responsive MERN stack web app for managing customer orders and providing real-time order status updates to both customers and restaurant workers.
 								</p>
 								<div className="d-flex justify-content-end">
 									<Link
-										to="https://github.com/N4choCM"
+										to="https://github.com/N4choCM/rollingEats"
 										className="text-white social-hover me-3"
 										target="_blank"
 									>
@@ -145,7 +168,7 @@ const ProjectCards = ({ darkMode }) => {
 										></i>
 									</Link>
 									<Link
-										to="https://github.com/N4choCM"
+										to="https://rolling-eats.netlify.app/login"
 										className="text-white social-hover"
 										target="_blank"
 									>
