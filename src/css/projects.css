@@ -25,7 +25,7 @@
 
 .card-img-top {
     object-fit: cover;
-    height: 35vh;
+    height: 30vh;
 }
 
 .img-custom-filter{
@@ -58,6 +58,10 @@
 
 .bg-node {
 	background-color: #80bd01 !important;
+}
+
+.bg-kotlin {
+	background-color: #bf21f1 !important;
 }
 
 .social-disabled {
