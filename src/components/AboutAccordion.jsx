@@ -52,14 +52,13 @@ const AboutAccordion = ({ darkMode }) => {
 							src={nachoPicLg}
 							className={
 								darkMode
-									? "border-nacho rounded-circle d-flex justify-content-center w-75 mx-auto custom-shadow-pic-dark"
-									: "border-nacho rounded-circle d-flex justify-content-center w-75 mx-auto custom-shadow-pic-light"
+									? "border-nacho rounded-circle d-flex justify-content-center align-items-center w-75 mx-auto custom-shadow-pic-dark"
+									: "border-nacho rounded-circle d-flex justify-content-center align-items-center w-75 mx-auto custom-shadow-pic-light"
 							}
 							alt="Nacho Campos Martí"
-							data-atropos-offset="-5"
 						/>
 					</div>
-					<div className="offset-1 col-10 col-lg-5">
+					<div className="offset-1 col-10 col-lg-5 d-flex justify-content-center align-items-center">
 						<p className="text-justify-both">
 							As a passionate full-stack developer, I find immense
 							joy in programming and take great pride in my work.
