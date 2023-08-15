@@ -21,7 +21,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/*" element={<MainRoutes changeDarkMode={changeDarkMode} darkMode={darkMode} />} />
-        <Route path="*" element={<ErrorScreen />} />
+        <Route path="*" element={<ErrorScreen changeDarkMode={changeDarkMode} darkMode={darkMode} />} />
       </Routes>
     </BrowserRouter>
   )

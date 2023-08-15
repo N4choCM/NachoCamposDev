@@ -11,6 +11,13 @@ body {
 	padding: 0;
 }
 
+.ancla:before{
+    display:block;
+    content:" ";
+    margin-top: -74px;
+    height: 74px;
+}
+
 .app {
 	display: flex;
 	flex-direction: column;
@@ -34,11 +41,27 @@ footer {
 
 body.app-mode-dark {
 	background-color: #333;
-	color: white; 
+	color: white;
 }
-  
-  body.app-mode-light {
-	background-color: #F0F0F0;
+
+body.app-mode-light {
+	background-color: #f0f0f0;
 	color: black;
-  }
-  
+}
+
+::selection {
+	background-color: #ff8062;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #888;
+	border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #f1f1f1;
+}

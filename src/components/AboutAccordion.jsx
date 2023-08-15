@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 import nachoPicLg from "../assets/nachoPic-lg.png";
 import "../css/about.css";
-import "atropos/css";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 import masterTitle from "../assets/MATitle.jpg";
@@ -45,21 +44,20 @@ const AboutAccordion = ({ darkMode }) => {
 
 	return (
 		<>
-			<div className="container">
+			<div id="about" className="container ancla">
 				<div className="row py-5 px-4">
 				<div className="offset-1 offset-md-0 col-10 mx-md-auto mt-2 mb-4 d-lg-none">
 						<img
 							src={nachoPicLg}
 							className={
 								darkMode
-									? "border-nacho rounded-circle d-flex justify-content-center w-75 mx-auto custom-shadow-pic-dark"
-									: "border-nacho rounded-circle d-flex justify-content-center w-75 mx-auto custom-shadow-pic-light"
+									? "border-nacho rounded-circle d-flex justify-content-center align-items-center w-75 mx-auto custom-shadow-pic-dark"
+									: "border-nacho rounded-circle d-flex justify-content-center align-items-center w-75 mx-auto custom-shadow-pic-light"
 							}
 							alt="Nacho Campos Martí"
-							data-atropos-offset="-5"
 						/>
 					</div>
-					<div className="offset-1 col-10 col-lg-5">
+					<div className="offset-1 col-10 col-lg-5 d-flex justify-content-center align-items-center">
 						<p className="text-justify-both">
 							As a passionate full-stack developer, I find immense
 							joy in programming and take great pride in my work.

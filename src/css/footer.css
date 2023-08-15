@@ -1,0 +1,28 @@
+.bg-footer{
+    background-color: #895ff9 !important;
+}
+
+.margin-footer{
+    margin-bottom: 0px !important;
+}
+
+.footer-logo {
+    width: 10vw !important;
+  }
+
+  .social-hover:hover {
+    color: #ff8062 !important;
+}
+
+.whatsapp{
+    text-decoration: none !important;
+    color: white;
+}
+
+.whatsapp:hover {
+    color: #4ecb5c !important;
+}
+
+.img-logo-white{
+    filter: contrast(0) brightness(10);
+  }

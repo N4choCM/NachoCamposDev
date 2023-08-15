@@ -7,7 +7,7 @@ import smBanner from "../assets/sm-banner.jpg";
 const Banner = ({ darkMode }) => {
 	return (
 		<div
-			id="carouselExampleFade"
+			id="home"
 			className="carousel slide carousel-fade"
 			data-bs-ride="carousel"
 		>
@@ -62,8 +62,8 @@ const Banner = ({ darkMode }) => {
 						<h5
 							className={
 								darkMode
-									? "text-white text-center writing-machine"
-									: "text-dark text-center writing-machine"
+									? "text-white text-center writing-machine-blink"
+									: "text-dark text-center writing-machine-blink"
 							}
 						>
 							and I develop software solutions.
