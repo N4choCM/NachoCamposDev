@@ -1,5 +1,6 @@
 import "../css/navbar.css";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { Link } from 'react-scroll';
 import logo from "../assets/favIcon.png";
 import PropTypes from "prop-types";
 
@@ -55,10 +56,8 @@ const NavBar = ({ darkMode, changeDarkMode }) => {
 					<div className="collapse navbar-collapse" id="navbarNav">
 						<ul className="navbar-nav ms-auto">
 							<li className="nav-item hover-custom">
-								<NavLink
-									className="nav-link"
-									aria-current="page"
-									to="/"
+							<Link
+									to="home" smooth={true} duration={200} activeClassName="active" className="nav-link custom-pointer"
 								>
 									<i
 										className={
@@ -77,13 +76,11 @@ const NavBar = ({ darkMode, changeDarkMode }) => {
 									>
 										Home
 									</span>
-								</NavLink>
+								</Link>
 							</li>
 							<li className="nav-item hover-custom">
-								<NavLink
-									className="nav-link"
-									aria-current="page"
-									to="/"
+								<Link
+									to="about" smooth={true} duration={200} activeClassName="active" className="nav-link custom-pointer"
 								>
 									<i
 										className={
@@ -102,15 +99,12 @@ const NavBar = ({ darkMode, changeDarkMode }) => {
 									>
 										About Me
 									</span>{" "}
-								</NavLink>
+								</Link>
 							</li>
 							<li className="nav-item hover-custom">
-								<NavLink
-									className="nav-link"
-									aria-current="page"
-									to="/"
-								>
-									<i
+							<Link
+									to="projects" smooth={true} duration={200} activeClassName="active" className="nav-link custom-pointer"
+								>									<i
 										className={
 											darkMode
 												? "text-dark fa fa-rocket me-1"
@@ -127,7 +121,7 @@ const NavBar = ({ darkMode, changeDarkMode }) => {
 									>
 										Projects
 									</span>{" "}
-								</NavLink>
+								</Link>
 							</li>
 							<li className="nav-item hover-custom">
 								<NavLink

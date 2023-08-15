@@ -7,7 +7,7 @@ import smBanner from "../assets/sm-banner.jpg";
 const Banner = ({ darkMode }) => {
 	return (
 		<div
-			id="carouselExampleFade"
+			id="home"
 			className="carousel slide carousel-fade"
 			data-bs-ride="carousel"
 		>

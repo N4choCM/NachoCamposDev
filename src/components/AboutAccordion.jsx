@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 import nachoPicLg from "../assets/nachoPic-lg.png";
 import "../css/about.css";
-import "atropos/css";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 import masterTitle from "../assets/MATitle.jpg";
@@ -45,7 +44,7 @@ const AboutAccordion = ({ darkMode }) => {
 
 	return (
 		<>
-			<div className="container">
+			<div id="about" className="container">
 				<div className="row py-5 px-4">
 				<div className="offset-1 offset-md-0 col-10 mx-md-auto mt-2 mb-4 d-lg-none">
 						<img
