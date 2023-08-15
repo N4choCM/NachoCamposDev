@@ -15,7 +15,6 @@ const MainRoutes = ({changeDarkMode, darkMode}) => {
 					<Route path="/" element={<HomeScreen changeDarkMode={changeDarkMode} darkMode={darkMode}/>} />
 					<Route path="/about" element={<AboutAccordion changeDarkMode={changeDarkMode} darkMode={darkMode}/>} />
 					<Route path="/projects" element={<ProjectCards changeDarkMode={changeDarkMode} darkMode={darkMode}/>} />
-
 					<Route path="*" element={<ErrorScreen changeDarkMode={changeDarkMode} darkMode={darkMode}/>} />
 				</Routes>
 				<Footer changeDarkMode={changeDarkMode} darkMode={darkMode}/>
