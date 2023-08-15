@@ -44,7 +44,7 @@ const AboutAccordion = ({ darkMode }) => {
 
 	return (
 		<>
-			<div id="about" className="container">
+			<div id="about" className="container ancla">
 				<div className="row py-5 px-4">
 				<div className="offset-1 offset-md-0 col-10 mx-md-auto mt-2 mb-4 d-lg-none">
 						<img

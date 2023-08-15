@@ -7,7 +7,7 @@ import flaggedPic from "../assets/flagged.jpg";
 
 const ProjectCards = ({ darkMode }) => {
 	return (
-		<>
+		<div id="projects" className="ancla">
 			<h2
 				className={
 					darkMode
@@ -276,7 +276,7 @@ const ProjectCards = ({ darkMode }) => {
 					</div>
 				</div>
 			</div>
-		</>
+		</div>
 	);
 };
 

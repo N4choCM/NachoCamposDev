@@ -11,6 +11,13 @@ body {
 	padding: 0;
 }
 
+.ancla:before{
+    display:block;
+    content:" ";
+    margin-top: -74px;
+    height: 74px;
+}
+
 .app {
 	display: flex;
 	flex-direction: column;

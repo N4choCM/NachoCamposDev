@@ -5,6 +5,7 @@ import ErrorScreen from "../pages/ErrorScreen";
 import HomeScreen from "../pages/HomeScreen";
 import AboutAccordion from "../components/AboutAccordion";
 import PropTypes from "prop-types";
+import ProjectCards from "../components/ProjectCards";
 
 const MainRoutes = ({changeDarkMode, darkMode}) => {
 		return (
@@ -13,6 +14,7 @@ const MainRoutes = ({changeDarkMode, darkMode}) => {
 				<Routes>
 					<Route path="/" element={<HomeScreen changeDarkMode={changeDarkMode} darkMode={darkMode}/>} />
 					<Route path="/about" element={<AboutAccordion changeDarkMode={changeDarkMode} darkMode={darkMode}/>} />
+					<Route path="/projects" element={<ProjectCards changeDarkMode={changeDarkMode} darkMode={darkMode}/>} />
 					<Route path="*" element={<ErrorScreen changeDarkMode={changeDarkMode} darkMode={darkMode}/>} />
 				</Routes>
 				<Footer changeDarkMode={changeDarkMode} darkMode={darkMode}/>
