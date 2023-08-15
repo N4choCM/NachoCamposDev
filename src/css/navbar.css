@@ -35,3 +35,7 @@
 .form-check-input:focus{
   box-shadow: none !important;
 }
+
+.custom-pointer{
+  cursor: pointer;
+}
