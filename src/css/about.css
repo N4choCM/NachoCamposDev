@@ -124,3 +124,10 @@
 	text-decoration: none !important;
 	color: #ffbb00 !important;
 }
+
+@media (max-width: 768px) {
+	#list-without-padding{
+		padding: 0px !important;
+		margin-left: 1rem !important;
+	}
+}
