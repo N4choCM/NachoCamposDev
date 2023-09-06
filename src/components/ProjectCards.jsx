@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 import shadowbanePic from "../assets/shadowbane.jpg";
 import rollingEatsPic from "../assets/rollingEats.jpg";
 import flaggedPic from "../assets/flagged.jpg";
+import nachoGptPic from "../assets/Nacho-gpt-lg.jpg";
+import photogramPic from "../assets/photogramPic.jpg";
+import draw4KidsPic from "../assets/draw4KidsPic.jpg";
 
 const ProjectCards = ({ darkMode }) => {
 	return (
@@ -88,15 +91,98 @@ const ProjectCards = ({ darkMode }) => {
 										></i>
 									</Link>
 									<Link
-										to="https://github.com/N4choCM"
-										className="text-white social-disabled"
+										to="https://shadowbane.netlify.app/"
+										className="text-white social-hover"
 										target="_blank"
 									>
 										<i
 											className={
 												darkMode
-													? "fa fa-link fa-2x social-disabled"
-													: "fa fa-link fa-2x social-disabled"
+													? "fa fa-eye fa-2x social-hover"
+													: "fa fa-eye fa-2x social-hover"
+											}
+											aria-hidden="true"
+										></i>
+									</Link>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div className="col">
+						<div
+							className={
+								darkMode
+									? "card custom-shadow-card-dark"
+									: "card custom-shadow-card-light"
+							}
+						>
+							<img
+								src={nachoGptPic}
+								className="card-img-top img-custom-filter"
+								alt="Nacho-GPT main screen"
+							/>
+							<div
+								className={
+									darkMode
+										? "card-body bg-projects-dark"
+										: "card-body bg-projects-light"
+								}
+							>
+								<h5
+									className={
+										darkMode
+											? "card-title text-white mb-0"
+											: "card-title text-dark mb-0"
+									}
+								>
+									Nacho-GPT
+								</h5>
+								<div className="mb-2">
+									<span className="badge rounded-pill bg-python me-2">
+										Python
+									</span>
+									<span className="badge rounded-pill bg-reflex me-2">
+										Reflex
+									</span>
+								</div>
+								<p
+									className={
+										darkMode
+											? "card-text text-white text-justify-both"
+											: "card-text text-dark text-justify-both"
+									}
+								>
+									Nacho-GPT is a Chat-GPT clone developed
+									using Reflex, the brand new pure Python
+									framework. It is empowered by OpenAI&apos;s
+									Chat-GPT 3.5 and replies to all your
+									queries! It will be deployed soon.
+								</p>
+								<div className="d-flex justify-content-end">
+									<Link
+										to="https://github.com/N4choCM/Nacho_GPT"
+										className="text-white social-hover me-3"
+										target="_blank"
+									>
+										<i
+											className={
+												darkMode
+													? "fa fa-github fa-2x text-white social-hover"
+													: "fa fa-github fa-2x text-dark social-hover"
+											}
+											aria-hidden="true"
+										></i>
+									</Link>
+									<Link
+										to="https://www.youtube.com/watch?v=bZS5Ut1ctFI&ab_channel=NachoCamposMart%C3%AD"
+										className="text-white social-hover"
+										target="_blank"
+									>
+										<i
+											className={
+												darkMode
+													? "fa fa-eye fa-2x social-hover"
+													: "fa fa-eye fa-2x social-hover"
 											}
 											aria-hidden="true"
 										></i>
@@ -177,15 +263,15 @@ const ProjectCards = ({ darkMode }) => {
 										></i>
 									</Link>
 									<Link
-										to="https://rolling-eats.netlify.app/login"
+										to="https://rolling-eats.netlify.app"
 										className="text-white social-hover"
 										target="_blank"
 									>
 										<i
 											className={
 												darkMode
-													? "fa fa-link fa-2x text-white social-hover"
-													: "fa fa-link fa-2x text-dark social-hover"
+													? "fa fa-eye fa-2x text-white social-hover"
+													: "fa fa-eye fa-2x text-dark social-hover"
 											}
 											aria-hidden="true"
 										></i>
@@ -235,7 +321,7 @@ const ProjectCards = ({ darkMode }) => {
 											: "card-text text-dark text-justify-both"
 									}
 								>
-									Discover the world with FlagsQuiz, a
+									Discover the world with Flagged!, a
 									captivating Kotlin-powered game on Google
 									Play! Test your knowledge of countries&apos;
 									flags in a fun and educational quiz
@@ -264,8 +350,163 @@ const ProjectCards = ({ darkMode }) => {
 										<i
 											className={
 												darkMode
-													? "fa fa-link fa-2x social-hover"
-													: "fa fa-link fa-2x social-hover"
+													? "fa fa-eye fa-2x social-hover"
+													: "fa fa-eye fa-2x social-hover"
+											}
+											aria-hidden="true"
+										></i>
+									</Link>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div className="col">
+						<div
+							className={
+								darkMode
+									? "card custom-shadow-card-dark"
+									: "card custom-shadow-card-light"
+							}
+						>
+							<img
+								src={draw4KidsPic}
+								className="card-img-top img-custom-filter"
+								alt="Draw4Kids main screen"
+							/>
+							<div
+								className={
+									darkMode
+										? "card-body bg-projects-dark"
+										: "card-body bg-projects-light"
+								}
+							>
+								<h5
+									className={
+										darkMode
+											? "card-title text-white mb-0"
+											: "card-title text-dark mb-0"
+									}
+								>
+									Draw4Kids
+								</h5>
+								<div className="mb-2">
+									<span className="badge rounded-pill bg-kotlin me-2">
+										Kotlin
+									</span>
+								</div>
+								<p
+									className={
+										darkMode
+											? "card-text text-white text-justify-both"
+											: "card-text text-dark text-justify-both"
+									}
+								>
+									Draw4Kids is an Android app developed with Kotlin. It is a simple drawing app for kids, with a wide range of colors and brush sizes. It also allows to save the drawings to the device&apos;s gallery.
+								</p>
+								<div className="d-flex justify-content-end">
+									<Link
+										to="https://github.com/N4choCM/draw4Kids"
+										className="text-white social-hover me-3"
+										target="_blank"
+									>
+										<i
+											className={
+												darkMode
+													? "fa fa-github fa-2x text-white social-hover"
+													: "fa fa-github fa-2x text-dark social-hover"
+											}
+											aria-hidden="true"
+										></i>
+									</Link>
+									<Link
+										to="#"
+										className="text-white social-disabled"
+										target="_blank"
+									>
+										<i
+											className={
+												darkMode
+													? "fa fa-eye fa-2x social-disabled"
+													: "fa fa-eye fa-2x social-disabled"
+											}
+											aria-hidden="true"
+										></i>
+									</Link>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div className="col">
+						<div
+							className={
+								darkMode
+									? "card custom-shadow-card-dark"
+									: "card custom-shadow-card-light"
+							}
+						>
+							<img
+								src={photogramPic}
+								className="card-img-top img-custom-filter"
+								alt="Photogram main screen"
+							/>
+							<div
+								className={
+									darkMode
+										? "card-body bg-projects-dark"
+										: "card-body bg-projects-light"
+								}
+							>
+								<h5
+									className={
+										darkMode
+											? "card-title text-white mb-0"
+											: "card-title text-dark mb-0"
+									}
+								>
+									Photogram
+								</h5>
+								<div className="mb-2">
+									<span className="badge rounded-pill bg-html me-2">
+										HTML
+									</span>
+									<span className="badge rounded-pill bg-css me-2">
+										CSS
+									</span>
+								</div>
+								<p
+									className={
+										darkMode
+											? "card-text text-white text-justify-both"
+											: "card-text text-dark text-justify-both"
+									}
+								>
+									Photogram is a blog about photography developed using HTML and CSS. It was born as part of the activities organised by Rolling Code School in their Full Stack Web Development Course.
+								</p>
+								<div className="d-flex justify-content-end">
+									<Link
+										to="https://github.com/N4choCM/photogram"
+										className="text-white social-hover me-3"
+										target="_blank"
+									>
+										<i
+											className={
+												darkMode
+													? "fa fa-github fa-2x text-white social-hover"
+													: "fa fa-github fa-2x text-dark social-hover"
+											}
+											aria-hidden="true"
+										></i>
+									</Link>
+									<Link
+										to="https://photogramers.netlify.app/"
+										className="text-white social-hover"
+										target="_blank"
+									>
+										<i
+											className={
+												darkMode
+													? "fa fa-eye fa-2x social-hover"
+													: "fa fa-eye fa-2x social-hover"
 											}
 											aria-hidden="true"
 										></i>

@@ -161,6 +161,9 @@ const AboutAccordion = ({ darkMode }) => {
 												populate Data Bases
 											</li>
 											<li>
+												Development of Microsoft Azure Service Bus to integrate the backend side of our server with the AI models.
+											</li>
+											<li>
 												Development of Thymeleaf
 												templates to establish email
 												services
