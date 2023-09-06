@@ -58,7 +58,7 @@ const AboutAccordion = ({ darkMode }) => {
 						/>
 					</div>
 					<div className="offset-1 col-10 col-lg-5 d-flex justify-content-center align-items-center">
-						<p className="text-justify-both">
+						<p className="d-none d-md-block text-justify-both">
 							As a passionate full-stack developer, I find immense
 							joy in programming and take great pride in my work.
 							My primary focus lies in backend development, where
@@ -74,6 +74,10 @@ const AboutAccordion = ({ darkMode }) => {
 							tech environments. I relish the opportunity to
 							tackle exciting projects and continue growing every
 							day. Let&apos;s create something amazing together!
+						</p>
+						<p className="d-md-none text-justify-both">
+						As a passionate full-stack developer, I find immense
+							joy in programming and take great pride in my work. My focus is primarily on backend development, where I excel in crafting efficient solutions, but I&apos;m also eager to embrace challenges in the frontend domain. With strong skills in Java/Spring Boot, React and Python, and some knowledge in Angular, Kotlin, and C# as well, I&apos;m well-equipped for diverse tech environments. I relish tackling exciting projects and growing daily. Let&apos;s collaborate to create something extraordinary!
 						</p>
 					</div>
 					<div className="offset-1 offset-md-0 col-10 col-md-5 my-auto d-none d-lg-block">
@@ -130,31 +134,20 @@ const AboutAccordion = ({ darkMode }) => {
 											Digital & Product Solutions (2023 -
 											ongoing)
 										</h5>
-										<div className="mb-2 text-center text-md-start">
+										<div className="mb-2">
 											<span className="badge rounded-pill bg-spring me-2">
 												Spring Boot
 											</span>
 											<span className="badge rounded-pill bg-java me-2">
 												Java
 											</span>
-											<span className="badge rounded-pill bg-python me-2 d-none d-md-inline">
+											<span className="badge rounded-pill bg-python me-2 ">
 												Python
 											</span>
-											<span className="badge rounded-pill bg-angular me-2 d-none d-md-inline">
+											<span className="badge rounded-pill bg-angular me-2 ">
 												Angular
 											</span>
-											<span className="badge rounded-pill bg-sql me-2 d-none d-md-inline">
-												SQL
-											</span>
-										</div>
-										<div className="mb-2 text-center text-md-start d-md-none">
-											<span className="badge rounded-pill bg-python me-2">
-												Python
-											</span>
-											<span className="badge rounded-pill bg-angular me-2">
-												Angular
-											</span>
-											<span className="badge rounded-pill bg-sql me-2">
+											<span className="badge rounded-pill bg-sql me-2 ">
 												SQL
 											</span>
 										</div>
@@ -210,7 +203,7 @@ const AboutAccordion = ({ darkMode }) => {
 										}
 									>
 										{" "}
-										<ul className="text-justify-both">
+										<ul id="list-without-padding" className="text-justify-both">
 											<li>
 												BSc in Computing Engineering -{" "}
 												<span className="badge rounded-pill bg-uned me-2">
@@ -305,7 +298,7 @@ const AboutAccordion = ({ darkMode }) => {
 										}
 									>
 										{" "}
-										<ul className="text-justify-both">
+										<ul id="list-without-padding" className="text-justify-both">
 											<li className="mb-3">
 												<a
 													href=""
@@ -327,21 +320,13 @@ const AboutAccordion = ({ darkMode }) => {
 														Rolling Code School
 													</span>{" "}
 													(2022 - 2023)
-													<div className="text-center text-md-start">
+													<div className="">
 														<span className="badge rounded-pill bg-mongo me-2">
 															MongoDB
 														</span>
 														<span className="badge rounded-pill bg-express me-2">
 															Express.js
 														</span>
-														<span className="badge rounded-pill bg-react me-2 d-none d-md-inline">
-															React
-														</span>
-														<span className="badge rounded-pill bg-node me-2 d-none d-md-inline">
-															Node.js
-														</span>
-													</div>
-													<div className="text-center text-md-start d-md-none">
 														<span className="badge rounded-pill bg-react me-2">
 															React
 														</span>
@@ -373,24 +358,13 @@ const AboutAccordion = ({ darkMode }) => {
 														Udemy
 													</span>{" "}
 													(2022)
-													<div className="mb-2 text-center text-md-start">
+													<div className="mb-2">
 														<span className="badge rounded-pill bg-spring me-2">
 															Spring Boot
 														</span>
 														<span className="badge rounded-pill bg-java me-2">
 															Java
 														</span>
-														<span className="badge rounded-pill bg-angular me-2 d-none d-md-inline">
-															Angular
-														</span>
-														<span className="badge rounded-pill bg-docker me-2 d-none d-md-inline">
-															Docker
-														</span>
-														<span className="badge rounded-pill bg-sql me-2 d-none d-md-inline">
-															SQL
-														</span>
-													</div>
-													<div className="mb-2 text-center d-md-none">
 														<span className="badge rounded-pill bg-angular me-2">
 															Angular
 														</span>
@@ -433,7 +407,7 @@ const AboutAccordion = ({ darkMode }) => {
 										}
 									>
 										{" "}
-										<ul>
+										<ul id="list-without-padding">
 											<li>
 												Spanish -{" "}
 												<span>
