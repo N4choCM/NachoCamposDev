@@ -9,7 +9,8 @@ const NavBar = ({ darkMode, changeDarkMode }) => {
 		<header className="fixed-top">
 			<nav className="navbar navbar-expand-lg navbar-dark navbar-custom">
 				<div className="container">
-					<Link className="navbar-brand my-auto" to="/">
+					<Link 									to="home" smooth={true} duration={200} activeClassName="active" className="navbar-brand custom-pointer"
+>
 						<div>
 							<img
 								className={
