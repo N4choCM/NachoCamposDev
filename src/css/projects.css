@@ -64,6 +64,15 @@
 	background-color: #bf21f1 !important;
 }
 
+.bg-python {
+	background-color: #ffd448 !important;
+}
+
+.bg-reflex {
+	background-color: #e5ddf3 !important;
+	color: black !important;
+}
+
 .social-disabled {
 	pointer-events: none !important;
 	cursor: none !important;

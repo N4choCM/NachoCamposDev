@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import lgBanner from "../assets/lg-banner.jpg";
 import mdBanner from "../assets/md-banner.jpg";
 import smBanner from "../assets/sm-banner.jpg";
+import { Link } from "react-scroll";
 
 const Banner = ({ darkMode }) => {
 	return (
@@ -62,14 +63,30 @@ const Banner = ({ darkMode }) => {
 						<h5
 							className={
 								darkMode
-									? "text-white text-center writing-machine-blink"
-									: "text-dark text-center writing-machine-blink"
+									? "d-none d-md-block text-white text-center writing-machine-blink"
+									: "d-none d-md-block text-dark text-center writing-machine-blink"
 							}
 						>
 							and I develop software solutions.
 						</h5>
+						<p
+							className={
+								darkMode
+									? "d-md-none text-white text-center writing-machine-blink"
+									: "d-md-none text-dark text-center writing-machine-blink"
+							}
+						>
+							and I develop software solutions.
+						</p>
 						</span>
 						<br />
+							<Link
+									to="about"
+									smooth={true}
+									duration={200}
+									// activeClassName="active"
+									// className="nav-link custom-pointer"
+								>
 						<button
 							className={
 								darkMode
@@ -77,8 +94,10 @@ const Banner = ({ darkMode }) => {
 									: "btn btn-outline-dark btn-lg btn-load btn-appear"
 							}
 						>
+									
 							Get to know me! 😀
 						</button>
+								</Link>
 					</div>
 				</div>
 			</div>
