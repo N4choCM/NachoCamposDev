@@ -3,8 +3,25 @@ import { NavLink } from "react-router-dom";
 import { Link } from "react-scroll";
 import logo from "../assets/favIcon.png";
 import PropTypes from "prop-types";
+import Swal from 'sweetalert2';
 
 const NavBar = ({ darkMode, changeDarkMode }) => {
+
+	const showContactInfo = () => {
+		Swal.fire({
+			html: `
+				<h6>Email: nachocamposdev@gmail.com</h6>
+				<h6>Phone: +34 628 523 682</h6>
+			`,
+			icon: 'info',
+			showCancelButton: false,
+			showConfirmButton: false,
+			showCloseButton: true,
+			position: window.innerWidth <= 992 ? 'center' : 'top-end',
+		});
+	};
+	
+
 	return (
 		<header className="fixed-top">
 			<nav className="navbar navbar-expand-lg navbar-dark navbar-custom">
@@ -222,31 +239,31 @@ const NavBar = ({ darkMode, changeDarkMode }) => {
 								</NavLink>
 							</li>
 							<li className="nav-item hover-custom">
-								<NavLink
-									className="nav-link"
-									aria-current="page"
-									to="https://www.linkedin.com/in/ignacio-campos-marti/"
-									target="_blank"
-								>
-									<i
-										className={
-											darkMode
-												? "text-dark fa fa-envelope me-1"
-												: "text-white fa fa-envelope me-1"
-										}
-										aria-hidden="true"
-									></i>
-									<span
-										className={
-											darkMode
-												? "text-dark"
-												: "text-white"
-										}
-									>
-										Contact
-									</span>
-								</NavLink>
-							</li>
+            <NavLink
+              className="nav-link"
+              aria-current="page"
+              to="#"
+              onClick={showContactInfo}
+            >
+              <i
+                className={
+                  darkMode
+                    ? "text-dark fa fa-envelope me-1"
+                    : "text-white fa fa-envelope me-1"
+                }
+                aria-hidden="true"
+              ></i>
+              <span
+                className={
+                  darkMode
+                    ? "text-dark"
+                    : "text-white"
+                }
+              >
+                Contact
+              </span>
+            </NavLink>
+          </li>
 						</ul>
 						<div className="d-flex gap-2 align-items-center justify-content-center ms-2">
 							{darkMode ? (
