@@ -39,3 +39,9 @@
 .custom-pointer{
   cursor: pointer;
 }
+
+@media (min-width: 992px) {
+  .swal2-popup {
+    margin-top: 5rem !important;
+  }
+}

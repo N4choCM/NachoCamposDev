@@ -1,15 +1,38 @@
 import "../css/navbar.css";
 import { NavLink } from "react-router-dom";
-import { Link } from 'react-scroll';
+import { Link } from "react-scroll";
 import logo from "../assets/favIcon.png";
 import PropTypes from "prop-types";
+import Swal from 'sweetalert2';
 
 const NavBar = ({ darkMode, changeDarkMode }) => {
+
+	const showContactInfo = () => {
+		Swal.fire({
+			html: `
+				<h6>Email: nachocamposdev@gmail.com</h6>
+				<h6>Phone: +34 628 523 682</h6>
+			`,
+			icon: 'info',
+			showCancelButton: false,
+			showConfirmButton: false,
+			showCloseButton: true,
+			position: window.innerWidth <= 992 ? 'center' : 'top-end',
+		});
+	};
+	
+
 	return (
 		<header className="fixed-top">
 			<nav className="navbar navbar-expand-lg navbar-dark navbar-custom">
 				<div className="container">
-					<Link className="navbar-brand my-auto" to="/">
+					<Link
+						to="home"
+						smooth={true}
+						duration={200}
+						activeClassName="active"
+						className="navbar-brand custom-pointer"
+					>
 						<div>
 							<img
 								className={
@@ -56,8 +79,12 @@ const NavBar = ({ darkMode, changeDarkMode }) => {
 					<div className="collapse navbar-collapse" id="navbarNav">
 						<ul className="navbar-nav ms-auto">
 							<li className="nav-item hover-custom">
-							<Link
-									to="home" smooth={true} duration={200} activeClassName="active" className="nav-link custom-pointer"
+								<Link
+									to="home"
+									smooth={true}
+									duration={200}
+									activeClassName="active"
+									className="nav-link custom-pointer"
 								>
 									<i
 										className={
@@ -80,7 +107,11 @@ const NavBar = ({ darkMode, changeDarkMode }) => {
 							</li>
 							<li className="nav-item hover-custom">
 								<Link
-									to="about" smooth={true} duration={200} activeClassName="active" className="nav-link custom-pointer"
+									to="about"
+									smooth={true}
+									duration={200}
+									activeClassName="active"
+									className="nav-link custom-pointer"
 								>
 									<i
 										className={
@@ -102,9 +133,15 @@ const NavBar = ({ darkMode, changeDarkMode }) => {
 								</Link>
 							</li>
 							<li className="nav-item hover-custom">
-							<Link
-									to="projects" smooth={true} duration={200} activeClassName="active" className="nav-link custom-pointer"
-								>									<i
+								<Link
+									to="projects"
+									smooth={true}
+									duration={200}
+									activeClassName="active"
+									className="nav-link custom-pointer"
+								>
+									{" "}
+									<i
 										className={
 											darkMode
 												? "text-dark fa fa-rocket me-1"
@@ -179,14 +216,14 @@ const NavBar = ({ darkMode, changeDarkMode }) => {
 								<NavLink
 									className="nav-link"
 									aria-current="page"
-									to="https://www.linkedin.com/in/ignacio-campos-marti/"
+									to="https://www.youtube.com/@NachoCamposMarti"
 									target="_blank"
 								>
 									<i
 										className={
 											darkMode
-												? "text-dark fa fa-envelope me-1"
-												: "text-white fa fa-envelope me-1"
+												? "text-dark fa fa-youtube-play me-1"
+												: "text-white fa fa-youtube-play me-1"
 										}
 										aria-hidden="true"
 									></i>
@@ -197,10 +234,36 @@ const NavBar = ({ darkMode, changeDarkMode }) => {
 												: "text-white"
 										}
 									>
-										Contact
-									</span>
+										YouTube
+									</span>{" "}
 								</NavLink>
 							</li>
+							<li className="nav-item hover-custom">
+            <NavLink
+              className="nav-link"
+              aria-current="page"
+              to="#"
+              onClick={showContactInfo}
+            >
+              <i
+                className={
+                  darkMode
+                    ? "text-dark fa fa-envelope me-1"
+                    : "text-white fa fa-envelope me-1"
+                }
+                aria-hidden="true"
+              ></i>
+              <span
+                className={
+                  darkMode
+                    ? "text-dark"
+                    : "text-white"
+                }
+              >
+                Contact
+              </span>
+            </NavLink>
+          </li>
 						</ul>
 						<div className="d-flex gap-2 align-items-center justify-content-center ms-2">
 							{darkMode ? (
