@@ -1,6 +1,6 @@
 import "../css/navbar.css";
 import { NavLink } from "react-router-dom";
-import { Link } from 'react-scroll';
+import { Link } from "react-scroll";
 import logo from "../assets/favIcon.png";
 import PropTypes from "prop-types";
 
@@ -9,8 +9,13 @@ const NavBar = ({ darkMode, changeDarkMode }) => {
 		<header className="fixed-top">
 			<nav className="navbar navbar-expand-lg navbar-dark navbar-custom">
 				<div className="container">
-					<Link 									to="home" smooth={true} duration={200} activeClassName="active" className="navbar-brand custom-pointer"
->
+					<Link
+						to="home"
+						smooth={true}
+						duration={200}
+						activeClassName="active"
+						className="navbar-brand custom-pointer"
+					>
 						<div>
 							<img
 								className={
@@ -57,8 +62,12 @@ const NavBar = ({ darkMode, changeDarkMode }) => {
 					<div className="collapse navbar-collapse" id="navbarNav">
 						<ul className="navbar-nav ms-auto">
 							<li className="nav-item hover-custom">
-							<Link
-									to="home" smooth={true} duration={200} activeClassName="active" className="nav-link custom-pointer"
+								<Link
+									to="home"
+									smooth={true}
+									duration={200}
+									activeClassName="active"
+									className="nav-link custom-pointer"
 								>
 									<i
 										className={
@@ -81,7 +90,11 @@ const NavBar = ({ darkMode, changeDarkMode }) => {
 							</li>
 							<li className="nav-item hover-custom">
 								<Link
-									to="about" smooth={true} duration={200} activeClassName="active" className="nav-link custom-pointer"
+									to="about"
+									smooth={true}
+									duration={200}
+									activeClassName="active"
+									className="nav-link custom-pointer"
 								>
 									<i
 										className={
@@ -103,9 +116,15 @@ const NavBar = ({ darkMode, changeDarkMode }) => {
 								</Link>
 							</li>
 							<li className="nav-item hover-custom">
-							<Link
-									to="projects" smooth={true} duration={200} activeClassName="active" className="nav-link custom-pointer"
-								>									<i
+								<Link
+									to="projects"
+									smooth={true}
+									duration={200}
+									activeClassName="active"
+									className="nav-link custom-pointer"
+								>
+									{" "}
+									<i
 										className={
 											darkMode
 												? "text-dark fa fa-rocket me-1"
@@ -173,6 +192,32 @@ const NavBar = ({ darkMode, changeDarkMode }) => {
 										}
 									>
 										LinkedIn
+									</span>{" "}
+								</NavLink>
+							</li>
+							<li className="nav-item hover-custom">
+								<NavLink
+									className="nav-link"
+									aria-current="page"
+									to="https://www.youtube.com/@NachoCamposMarti"
+									target="_blank"
+								>
+									<i
+										className={
+											darkMode
+												? "text-dark fa fa-youtube-play me-1"
+												: "text-white fa fa-youtube-play me-1"
+										}
+										aria-hidden="true"
+									></i>
+									<span
+										className={
+											darkMode
+												? "text-dark"
+												: "text-white"
+										}
+									>
+										YouTube
 									</span>{" "}
 								</NavLink>
 							</li>
