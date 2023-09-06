@@ -7,7 +7,8 @@
 }
 
 .footer-logo {
-    width: 10vw !important;
+    width: 10rem !important;
+    height: 10rem !important;
   }
 
   .social-hover:hover {

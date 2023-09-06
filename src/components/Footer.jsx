@@ -9,17 +9,31 @@ const Footer = ({ changeDarkMode, darkMode }) => {
 			<div className="bg-footer">
 				<div className="container">
 					<div className="row d-flex flex-column flex-md-row gap-5 py-5">
-						<div className="col-12 col-lg d-flex flex-lg-column justify-content-center align-items-center text-white gap-5">
+						<div className="d-none d-lg-flex col-12 col-lg d-flex flex-lg-column justify-content-center align-items-center text-white gap-5">
 							<Link
 								to="https://github.com/N4choCM"
 								className="text-white social-hover"
-                target="_blank"
+								target="_blank"
 							>
 								<i
 									className={
 										!darkMode
 											? "fa fa-github fa-2x text-white social-hover"
 											: "fa fa-github fa-2x text-dark social-hover"
+									}
+									aria-hidden="true"
+								></i>
+							</Link>
+							<Link
+								to="https://github.com/N4choCM"
+								className="text-white social-hover"
+								target="_blank"
+							>
+								<i
+									className={
+										!darkMode
+											? "fa fa-youtube-play fa-2x text-white social-hover"
+											: "fa fa-youtube-play fa-2x text-dark social-hover"
 									}
 									aria-hidden="true"
 								></i>
@@ -36,7 +50,7 @@ const Footer = ({ changeDarkMode, darkMode }) => {
 							<Link
 								to="https://www.linkedin.com/in/ignacio-campos-marti"
 								className="text-white social-hover"
-                target="_blank"
+								target="_blank"
 							>
 								<i
 									className={
@@ -107,6 +121,50 @@ const Footer = ({ changeDarkMode, darkMode }) => {
 									nachocamposdev@gmail.com
 								</span>
 							</p>
+						</div>
+						<div className="d-lg-none col-12 col-lg d-flex flex-lg-column justify-content-center align-items-center text-white gap-5">
+							<Link
+								to="https://github.com/N4choCM"
+								className="text-white social-hover"
+								target="_blank"
+							>
+								<i
+									className={
+										!darkMode
+											? "fa fa-github fa-2x text-white social-hover"
+											: "fa fa-github fa-2x text-dark social-hover"
+									}
+									aria-hidden="true"
+								></i>
+							</Link>
+							<Link
+								to="https://github.com/N4choCM"
+								className="text-white social-hover"
+								target="_blank"
+							>
+								<i
+									className={
+										!darkMode
+											? "fa fa-youtube-play fa-2x text-white social-hover"
+											: "fa fa-youtube-play fa-2x text-dark social-hover"
+									}
+									aria-hidden="true"
+								></i>
+							</Link>
+							<Link
+								to="https://www.linkedin.com/in/ignacio-campos-marti"
+								className="text-white social-hover"
+								target="_blank"
+							>
+								<i
+									className={
+										!darkMode
+											? "fa fa-linkedin-square fa-2x text-white social-hover"
+											: "fa fa-linkedin-square fa-2x text-dark social-hover"
+									}
+									aria-hidden="true"
+								></i>
+							</Link>
 						</div>
 						<div
 							className={
