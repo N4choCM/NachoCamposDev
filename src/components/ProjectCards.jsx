@@ -6,7 +6,8 @@ import rollingEatsPic from "../assets/rollingEats.jpg";
 import flaggedPic from "../assets/flagged.jpg";
 import nachoGptPic from "../assets/Nacho-gpt-lg.jpg";
 import photogramPic from "../assets/photogramPic.jpg";
-import draw4KidsPic from "../assets/draw4KidsPic.jpg";
+// import draw4KidsPic from "../assets/draw4KidsPic.jpg";
+import redflixApiPic from "../assets/redflixApiPic.jpg";
 
 const ProjectCards = ({ darkMode }) => {
 	return (
@@ -31,9 +32,9 @@ const ProjectCards = ({ darkMode }) => {
 							}
 						>
 							<img
-								src={shadowbanePic}
+								src={redflixApiPic}
 								className="card-img-top img-custom-filter"
-								alt="Shadowbane main screen"
+								alt="Redflix API REST main screen"
 							/>
 							<div
 								className={
@@ -49,100 +50,20 @@ const ProjectCards = ({ darkMode }) => {
 											: "card-title text-dark mb-0"
 									}
 								>
-									Shadowbane
+									Redflix REST API
 								</h5>
 								<div className="mb-2">
-									<span className="badge rounded-pill bg-html me-2">
-										HTML
+									<span className="badge rounded-pill bg-java me-2">
+										Java
 									</span>
-									<span className="badge rounded-pill bg-css me-2">
-										CSS
+									<span className="badge rounded-pill bg-spring me-2">
+										Spring Boot
 									</span>
-									<span className="badge rounded-pill bg-js me-2">
-										JS
-									</span>
-								</div>
-								<p
-									className={
-										darkMode
-											? "card-text text-white text-justify-both"
-											: "card-text text-dark text-justify-both"
-									}
-								>
-									In Shadowbane, a thrilling JS vanilla
-									videogame, embark on a daring quest to
-									escape a perilous dungeon teeming with foes.
-									Race against time, locate the key, and
-									secure your freedom!
-								</p>
-								<div className="d-flex justify-content-end">
-									<Link
-										to="https://github.com/N4choCM/shadowbane"
-										className="text-white social-hover me-3"
-										target="_blank"
-									>
-										<i
-											className={
-												darkMode
-													? "fa fa-github fa-2x text-white social-hover"
-													: "fa fa-github fa-2x text-dark social-hover"
-											}
-											aria-hidden="true"
-										></i>
-									</Link>
-									<Link
-										to="https://shadowbane.netlify.app/"
-										className="text-white social-hover"
-										target="_blank"
-									>
-										<i
-											className={
-												darkMode
-													? "fa fa-eye fa-2x social-hover"
-													: "fa fa-eye fa-2x social-hover"
-											}
-											aria-hidden="true"
-										></i>
-									</Link>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div className="col">
-						<div
-							className={
-								darkMode
-									? "card custom-shadow-card-dark"
-									: "card custom-shadow-card-light"
-							}
-						>
-							<img
-								src={nachoGptPic}
-								className="card-img-top img-custom-filter"
-								alt="Nacho-GPT main screen"
-							/>
-							<div
-								className={
-									darkMode
-										? "card-body bg-projects-dark"
-										: "card-body bg-projects-light"
-								}
-							>
-								<h5
-									className={
-										darkMode
-											? "card-title text-white mb-0"
-											: "card-title text-dark mb-0"
-									}
-								>
-									Nacho-GPT
-								</h5>
-								<div className="mb-2">
 									<span className="badge rounded-pill bg-python me-2">
 										Python
 									</span>
-									<span className="badge rounded-pill bg-reflex me-2">
-										Reflex
+									<span className="badge rounded-pill bg-thymeleaf me-2">
+										ThymeLeaf
 									</span>
 								</div>
 								<p
@@ -152,15 +73,15 @@ const ProjectCards = ({ darkMode }) => {
 											: "card-text text-dark text-justify-both"
 									}
 								>
-									Nacho-GPT is a Chat-GPT clone developed
-									using Reflex, the brand new pure Python
-									framework. It is empowered by OpenAI&apos;s
-									Chat-GPT 3.5 and replies to all your
-									queries! It will be deployed soon.
+									Redflix utilizes a Java/Spring Boot backend
+									with a Python fake data generator for
+									PostgreSQL. It features an email service and
+									will support a responsive web app for
+									watching your favorite movie trailers.
 								</p>
 								<div className="d-flex justify-content-end">
 									<Link
-										to="https://github.com/N4choCM/Nacho_GPT"
+										to="https://github.com/N4choCM/redflix"
 										className="text-white social-hover me-3"
 										target="_blank"
 									>
@@ -174,15 +95,15 @@ const ProjectCards = ({ darkMode }) => {
 										></i>
 									</Link>
 									<Link
-										to="https://www.youtube.com/watch?v=bZS5Ut1ctFI&ab_channel=NachoCamposMart%C3%AD"
+										to="https://documenter.getpostman.com/view/22117131/2s9YJW6Rbk"
 										className="text-white social-hover"
 										target="_blank"
 									>
 										<i
 											className={
 												darkMode
-													? "fa fa-eye fa-2x social-hover"
-													: "fa fa-eye fa-2x social-hover"
+													? "fa fa-eye fa-2x text-white social-hover"
+													: "fa fa-eye fa-2x text-dark social-hover"
 											}
 											aria-hidden="true"
 										></i>
@@ -280,6 +201,176 @@ const ProjectCards = ({ darkMode }) => {
 							</div>
 						</div>
 					</div>
+
+					<div className="col">
+						<div
+							className={
+								darkMode
+									? "card custom-shadow-card-dark"
+									: "card custom-shadow-card-light"
+							}
+						>
+							<img
+								src={shadowbanePic}
+								className="card-img-top img-custom-filter"
+								alt="Shadowbane main screen"
+							/>
+							<div
+								className={
+									darkMode
+										? "card-body bg-projects-dark"
+										: "card-body bg-projects-light"
+								}
+							>
+								<h5
+									className={
+										darkMode
+											? "card-title text-white mb-0"
+											: "card-title text-dark mb-0"
+									}
+								>
+									Shadowbane
+								</h5>
+								<div className="mb-2">
+									<span className="badge rounded-pill bg-html me-2">
+										HTML
+									</span>
+									<span className="badge rounded-pill bg-css me-2">
+										CSS
+									</span>
+									<span className="badge rounded-pill bg-js me-2">
+										JS
+									</span>
+								</div>
+								<p
+									className={
+										darkMode
+											? "card-text text-white text-justify-both"
+											: "card-text text-dark text-justify-both"
+									}
+								>
+									In Shadowbane, a thrilling JS vanilla
+									videogame, embark on a daring quest to
+									escape a perilous dungeon teeming with foes.
+									Race against time, locate the key, and
+									secure your freedom!
+								</p>
+								<div className="d-flex justify-content-end">
+									<Link
+										to="https://github.com/N4choCM/shadowbane"
+										className="text-white social-hover me-3"
+										target="_blank"
+									>
+										<i
+											className={
+												darkMode
+													? "fa fa-github fa-2x text-white social-hover"
+													: "fa fa-github fa-2x text-dark social-hover"
+											}
+											aria-hidden="true"
+										></i>
+									</Link>
+									<Link
+										to="https://shadowbane.netlify.app/"
+										className="text-white social-hover"
+										target="_blank"
+									>
+										<i
+											className={
+												darkMode
+													? "fa fa-eye text-white fa-2x social-hover"
+													: "fa fa-eye text-dark fa-2x social-hover"
+											}
+											aria-hidden="true"
+										></i>
+									</Link>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div className="col">
+						<div
+							className={
+								darkMode
+									? "card custom-shadow-card-dark"
+									: "card custom-shadow-card-light"
+							}
+						>
+							<img
+								src={nachoGptPic}
+								className="card-img-top img-custom-filter"
+								alt="Nacho-GPT main screen"
+							/>
+							<div
+								className={
+									darkMode
+										? "card-body bg-projects-dark"
+										: "card-body bg-projects-light"
+								}
+							>
+								<h5
+									className={
+										darkMode
+											? "card-title text-white mb-0"
+											: "card-title text-dark mb-0"
+									}
+								>
+									Nacho-GPT
+								</h5>
+								<div className="mb-2">
+									<span className="badge rounded-pill bg-python me-2">
+										Python
+									</span>
+									<span className="badge rounded-pill bg-reflex me-2">
+										Reflex
+									</span>
+								</div>
+								<p
+									className={
+										darkMode
+											? "card-text text-white text-justify-both"
+											: "card-text text-dark text-justify-both"
+									}
+								>
+									Nacho-GPT is a Chat-GPT clone developed
+									using Reflex, the brand new pure Python
+									framework. It is empowered by OpenAI&apos;s
+									Chat-GPT 3.5 and replies to all your
+									queries! It will be deployed soon.
+								</p>
+								<div className="d-flex justify-content-end">
+									<Link
+										to="https://github.com/N4choCM/Nacho_GPT"
+										className="text-white social-hover me-3"
+										target="_blank"
+									>
+										<i
+											className={
+												darkMode
+													? "fa fa-github fa-2x text-white social-hover"
+													: "fa fa-github fa-2x text-dark social-hover"
+											}
+											aria-hidden="true"
+										></i>
+									</Link>
+									<Link
+										to="https://www.youtube.com/watch?v=bZS5Ut1ctFI&ab_channel=NachoCamposMart%C3%AD"
+										className="text-white social-hover"
+										target="_blank"
+									>
+										<i
+											className={
+												darkMode
+													? "fa fa-eye text-white fa-2x social-hover"
+													: "fa fa-eye text-dark fa-2x social-hover"
+											}
+											aria-hidden="true"
+										></i>
+									</Link>
+								</div>
+							</div>
+						</div>
+					</div>
 					<div className="col">
 						<div
 							className={
@@ -350,8 +441,8 @@ const ProjectCards = ({ darkMode }) => {
 										<i
 											className={
 												darkMode
-													? "fa fa-eye fa-2x social-hover"
-													: "fa fa-eye fa-2x social-hover"
+													? "fa fa-eye text white fa-2x social-hover"
+													: "fa fa-eye text-dark fa-2x social-text-dark hover"
 											}
 											aria-hidden="true"
 										></i>
@@ -360,7 +451,7 @@ const ProjectCards = ({ darkMode }) => {
 							</div>
 						</div>
 					</div>
-					<div className="col">
+					{/* <div className="col">
 						<div
 							className={
 								darkMode
@@ -401,7 +492,11 @@ const ProjectCards = ({ darkMode }) => {
 											: "card-text text-dark text-justify-both"
 									}
 								>
-									Draw4Kids is an Android app developed with Kotlin. It is a simple drawing app for kids, with a wide range of colors and brush sizes. It also allows to save the drawings to the device&apos;s gallery.
+									Draw4Kids is an Android app developed with
+									Kotlin. It is a simple drawing app for kids,
+									with a wide range of colors and brush sizes.
+									It also allows to save the drawings to the
+									device&apos;s gallery.
 								</p>
 								<div className="d-flex justify-content-end">
 									<Link
@@ -427,7 +522,7 @@ const ProjectCards = ({ darkMode }) => {
 											className={
 												darkMode
 													? "fa fa-eye fa-2x social-disabled"
-													: "fa fa-eye fa-2x social-disabled"
+													: "fa fa-eye fa-2x social-disabled-light"
 											}
 											aria-hidden="true"
 										></i>
@@ -435,7 +530,7 @@ const ProjectCards = ({ darkMode }) => {
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> */}
 					<div className="col">
 						<div
 							className={
@@ -480,7 +575,11 @@ const ProjectCards = ({ darkMode }) => {
 											: "card-text text-dark text-justify-both"
 									}
 								>
-									Photogram is a blog about photography developed using HTML and CSS. It was born as part of the activities organised by Rolling Code School in their Full Stack Web Development Course.
+									Photogram is a blog about photography
+									developed using HTML and CSS. It was born as
+									part of the activities organised by Rolling
+									Code School in their Full Stack Web
+									Development Course.
 								</p>
 								<div className="d-flex justify-content-end">
 									<Link
@@ -505,8 +604,8 @@ const ProjectCards = ({ darkMode }) => {
 										<i
 											className={
 												darkMode
-													? "fa fa-eye fa-2x social-hover"
-													: "fa fa-eye fa-2x social-hover"
+													? "fa fa-eye text-white fa-2x social-hover"
+													: "fa fa-eye text-dark fa-2x social-hover"
 											}
 											aria-hidden="true"
 										></i>
