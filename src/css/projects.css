@@ -73,13 +73,39 @@
 	color: black !important;
 }
 
+.bg-thymeleaf{
+	background-color: #005f0f !important;
+}
+
+.bg-spring{
+	background-color: #6cb52d !important;
+}
+
 .social-disabled {
 	pointer-events: none !important;
 	cursor: none !important;
 	color: #dddddd !important;
 }
 
+.social-disabled-light {
+	pointer-events: none !important;
+	cursor: none !important;
+	color: #5b5b5b !important;
+}
+
 .text-justify-both {
 	text-align: justify;
 	text-justify: inter-word;
 }
+
+.card {
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-left-radius: 10px !important; 
+	border-bottom-right-radius: 10px !important; 
+  }
+
+  .card-body {
+	border-bottom-left-radius: 10px !important; 
+	border-bottom-right-radius: 10px !important; 
+  }
