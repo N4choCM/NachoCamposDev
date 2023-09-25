@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import logo from "../assets/favIcon.png";
 import PropTypes from "prop-types";
 
-const Footer = ({ changeDarkMode, darkMode }) => {
+const Footer = ({ darkMode }) => {
 	return (
 		<footer className="margin-footer mt-5">
 			<div className="bg-footer">
