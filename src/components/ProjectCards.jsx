@@ -53,17 +53,14 @@ const ProjectCards = ({ darkMode }) => {
 									Redflix REST API
 								</h5>
 								<div className="mb-2">
-									<span className="badge rounded-pill bg-java me-2">
-										Java
+									<span className="badge rounded-pill bg-node me-2">
+										Node.js
 									</span>
-									<span className="badge rounded-pill bg-spring me-2">
-										Spring Boot
+									<span className="badge rounded-pill bg-express me-2">
+										Express.js
 									</span>
 									<span className="badge rounded-pill bg-python me-2">
 										Python
-									</span>
-									<span className="badge rounded-pill bg-thymeleaf me-2">
-										ThymeLeaf
 									</span>
 								</div>
 								<p
@@ -73,7 +70,7 @@ const ProjectCards = ({ darkMode }) => {
 											: "card-text text-dark text-justify-both"
 									}
 								>
-									Redflix utilizes a Java/Spring Boot backend
+									Redflix utilizes a Node.js/Express.js backend
 									with a Python fake data generator for
 									PostgreSQL. It features an email service and
 									will support a responsive web app for
