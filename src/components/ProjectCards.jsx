@@ -78,7 +78,7 @@ const ProjectCards = ({ darkMode }) => {
 								</p>
 								<div className="d-flex justify-content-end">
 									<Link
-										to="https://github.com/N4choCM/redflix"
+										to="https://github.com/N4choCM/redflix-node"
 										className="text-white social-hover me-3"
 										target="_blank"
 									>
