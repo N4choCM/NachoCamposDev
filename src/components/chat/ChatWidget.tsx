@@ -43,12 +43,23 @@ export function ChatWidget() {
   const abortRef = useRef<AbortController | null>(null)
 
   const scrollToBottom = useCallback((behavior: ScrollBehavior = 'smooth') => {
-    const container = scrollContainerRef.current
-    if (container) {
-      container.scrollTo({ top: container.scrollHeight, behavior })
-      return
+    const run = () => {
+      const container = scrollContainerRef.current
+      if (container) {
+        // Instant jump first so content isn't clipped, then optional smooth
+        container.scrollTop = container.scrollHeight
+        if (behavior === 'smooth') {
+          container.scrollTo({ top: container.scrollHeight, behavior: 'smooth' })
+        }
+        return
+      }
+      messagesEndRef.current?.scrollIntoView({ behavior, block: 'end' })
     }
-    messagesEndRef.current?.scrollIntoView({ behavior, block: 'end' })
+
+    // Double rAF: wait for panel/keyboard layout before measuring scrollHeight
+    requestAnimationFrame(() => {
+      requestAnimationFrame(run)
+    })
   }, [])
 
   useEffect(() => {
@@ -58,10 +69,24 @@ export function ChatWidget() {
 
   useEffect(() => {
     if (!open) return
-    requestAnimationFrame(() => scrollToBottom('auto'))
+    scrollToBottom('auto')
+    // Extra pass after paint — iOS often lays out the keyboard one frame later
+    const t1 = window.setTimeout(() => scrollToBottom('auto'), 50)
+    const t2 = window.setTimeout(() => scrollToBottom('auto'), 200)
+    return () => {
+      window.clearTimeout(t1)
+      window.clearTimeout(t2)
+    }
   }, [open, scrollToBottom])
 
-  // Keep panel inside the visible area when the mobile keyboard opens
+  // Keyboard open/close changes panel height — pin to bottom again
+  useEffect(() => {
+    if (!open || viewport.height <= 0) return
+    scrollToBottom('auto')
+    const t = window.setTimeout(() => scrollToBottom('auto'), 100)
+    return () => window.clearTimeout(t)
+  }, [viewport.height, viewport.offsetTop, open, scrollToBottom])
+
   useEffect(() => {
     if (!open) return
 
@@ -91,7 +116,6 @@ export function ChatWidget() {
     }
   }, [open])
 
-  // Prevent background scroll while chat is open on small screens
   useEffect(() => {
     if (!open || !isCompact) return
     const previous = document.body.style.overflow
@@ -116,7 +140,6 @@ export function ChatWidget() {
     const handleClickOutside = (e: MouseEvent) => {
       const target = e.target as Node
       if (panelRef.current?.contains(target)) return
-      // On mobile the FAB is hidden while open; ignore outside clicks on the fab area
       setOpen(false)
     }
 
@@ -202,8 +225,9 @@ export function ChatWidget() {
     } finally {
       setStreaming(false)
       inputRef.current?.focus()
+      scrollToBottom('auto')
     }
-  }, [input, streaming, messages, t.chat.error])
+  }, [input, streaming, messages, t.chat.error, scrollToBottom])
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter' && !e.shiftKey) {
@@ -224,7 +248,6 @@ export function ChatWidget() {
     <>
       {open && (
         <>
-          {/* Dim background on small screens */}
           <div
             className="fixed inset-0 z-40 bg-black/40 lg:hidden"
             aria-hidden
@@ -251,7 +274,10 @@ export function ChatWidget() {
               </button>
             </div>
 
-            <div ref={scrollContainerRef} className="min-h-0 flex-1 space-y-3 overflow-x-hidden overflow-y-auto overscroll-contain p-4">
+            <div
+              ref={scrollContainerRef}
+              className="min-h-0 flex-1 space-y-3 overflow-x-hidden overflow-y-auto overscroll-contain px-4 pt-4 pb-8"
+            >
               {messages.map((msg, i) => {
                 const isStreamingMessage =
                   streaming && i === messages.length - 1 && msg.role === 'assistant'
@@ -280,7 +306,7 @@ export function ChatWidget() {
                   </div>
                 )
               })}
-              <div ref={messagesEndRef} />
+              <div ref={messagesEndRef} className="h-3 shrink-0" aria-hidden />
             </div>
 
             <div className="shrink-0 border-t border-zinc-200 p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] dark:border-zinc-700">
@@ -290,6 +316,11 @@ export function ChatWidget() {
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   onKeyDown={handleKeyDown}
+                  onFocus={() => {
+                    scrollToBottom('auto')
+                    window.setTimeout(() => scrollToBottom('auto'), 100)
+                    window.setTimeout(() => scrollToBottom('auto'), 300)
+                  }}
                   placeholder={t.chat.placeholder}
                   rows={1}
                   disabled={streaming}
@@ -311,7 +342,6 @@ export function ChatWidget() {
         </>
       )}
 
-      {/* Hide FAB while chat is open on mobile — header close is enough */}
       <button
         type="button"
         onClick={() => setOpen(!open)}
