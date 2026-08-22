@@ -1,0 +1,48 @@
+import { Github, Linkedin, Youtube } from 'lucide-react'
+import { profile } from '@/data/profile'
+import { useI18n } from '@/i18n/context'
+import { Logo } from '@/components/ui/Logo'
+
+const iconMap = {
+  github: Github,
+  linkedin: Linkedin,
+  youtube: Youtube,
+}
+
+export function Footer() {
+  const { t } = useI18n()
+  const year = new Date().getFullYear()
+
+  return (
+    <footer className="border-t border-cyan-200/40 bg-gradient-to-b from-cyan-50/80 via-violet-50/40 to-white/90 dark:border-zinc-800 dark:from-surface-950 dark:via-surface-950 dark:to-surface-950">
+      <div className="section-container flex flex-col items-center gap-5 py-12 text-center sm:gap-6">
+        <Logo className="h-10 w-10" />
+
+        <div className="flex items-center gap-4">
+          {profile.social.map((link) => {
+            const Icon = iconMap[link.icon as keyof typeof iconMap]
+            if (!Icon) return null
+            return (
+              <a
+                key={link.name}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-lg p-2 text-zinc-500 transition hover:bg-cyan-100 hover:text-cyan-700 dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-zinc-100"
+                aria-label={link.name}
+              >
+                <Icon className="h-5 w-5" />
+              </a>
+            )
+          })}
+        </div>
+
+        <p className="max-w-md text-sm text-zinc-500 dark:text-zinc-400">
+          © {year} {profile.name}. {t.footer.rights}
+        </p>
+
+        <p className="text-xs text-zinc-400 dark:text-zinc-500">{t.footer.tagline}</p>
+      </div>
+    </footer>
+  )
+}
