@@ -3,12 +3,15 @@
   "private": true,
   "version": "2.0.0",
   "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "dev": "vite",
-    "build": "tsx scripts/generate-knowledge.ts && vite build",
+    "build": "node --import tsx scripts/generate-knowledge.ts && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "generate:knowledge": "tsx scripts/generate-knowledge.ts"
+    "generate:knowledge": "node --import tsx scripts/generate-knowledge.ts"
   },
   "dependencies": {
     "@netlify/functions": "^3.1.0",
@@ -33,5 +36,9 @@
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.33.1",
     "vite": "^6.3.5"
+  },
+  "optionalDependencies": {
+    "@tailwindcss/oxide-linux-x64-gnu": "4.3.2",
+    "lightningcss-linux-x64-gnu": "1.32.0"
   }
 }
