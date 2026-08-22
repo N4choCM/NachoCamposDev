@@ -127,7 +127,7 @@ export const ui: UiTranslations = {
   chat: {
     title: 'Pregunta sobre Nacho',
     subtitle: 'Con IA — respuestas basadas en este portfolio',
-    placeholder: 'Pregúntame lo que quieras sobre Nacho...',
+    placeholder: 'Pregunta sobre Nacho...',
     send: 'Enviar',
     thinking: 'Pensando...',
     error: 'Algo salió mal. Inténtalo de nuevo.',

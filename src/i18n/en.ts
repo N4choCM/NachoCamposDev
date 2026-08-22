@@ -125,7 +125,7 @@ export const ui = {
   chat: {
     title: 'Ask about Nacho',
     subtitle: 'Powered by AI — answers based on this portfolio',
-    placeholder: 'Ask me anything about Nacho...',
+    placeholder: 'Ask about Nacho...',
     send: 'Send',
     thinking: 'Thinking...',
     error: 'Something went wrong. Please try again.',

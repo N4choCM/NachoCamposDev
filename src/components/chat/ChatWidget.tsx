@@ -325,7 +325,7 @@ export function ChatWidget() {
                   rows={1}
                   disabled={streaming}
                   enterKeyHint="send"
-                  className="min-w-0 flex-1 resize-none rounded-xl border border-zinc-200 bg-transparent px-3 py-2 text-[16px] leading-normal outline-none focus:border-brand-500 disabled:opacity-60 dark:border-zinc-700"
+                  className="min-h-11 min-w-0 flex-1 resize-none overflow-hidden rounded-xl border border-zinc-200 bg-transparent px-3 py-2.5 text-[16px] leading-normal outline-none focus:border-brand-500 disabled:opacity-60 dark:border-zinc-700"
                 />
                 <button
                   type="button"
