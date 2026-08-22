@@ -11,6 +11,8 @@ node_modules
 dist
 dist-ssr
 *.local
+.env
+.env.local
 
 # Editor directories and files
 .vscode/*
@@ -23,4 +25,8 @@ dist-ssr
 *.sln
 *.sw?
 
-node_modules
+# Generated chatbot knowledge (regenerated on build)
+netlify/functions/knowledge.json
+
+# Local Netlify folder
+.netlify
