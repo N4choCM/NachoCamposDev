@@ -234,7 +234,7 @@ export function ChatWidget() {
           <div
             ref={panelRef}
             style={mobilePanelStyle}
-            className="fixed z-50 flex flex-col overflow-hidden border border-zinc-200 bg-white shadow-2xl dark:border-zinc-700 dark:bg-zinc-900 max-lg:inset-x-0 max-lg:rounded-none lg:bottom-24 lg:right-4 lg:h-[min(32rem,calc(100dvh-8rem))] lg:w-[min(24rem,calc(100vw-2rem))] lg:rounded-2xl"
+            className="fixed z-50 flex w-full max-w-[100vw] flex-col overflow-hidden border border-zinc-200 bg-white shadow-2xl dark:border-zinc-700 dark:bg-zinc-900 max-lg:inset-x-0 max-lg:rounded-none lg:bottom-24 lg:right-4 lg:h-[min(32rem,calc(100dvh-8rem))] lg:w-[min(24rem,calc(100vw-2rem))] lg:max-w-none lg:rounded-2xl"
           >
             <div className="flex shrink-0 items-center justify-between border-b border-zinc-200 px-4 py-3 dark:border-zinc-700">
               <div className="min-w-0">
@@ -251,7 +251,7 @@ export function ChatWidget() {
               </button>
             </div>
 
-            <div ref={scrollContainerRef} className="min-h-0 flex-1 space-y-3 overflow-y-auto overscroll-contain p-4">
+            <div ref={scrollContainerRef} className="min-h-0 flex-1 space-y-3 overflow-x-hidden overflow-y-auto overscroll-contain p-4">
               {messages.map((msg, i) => {
                 const isStreamingMessage =
                   streaming && i === messages.length - 1 && msg.role === 'assistant'
@@ -284,7 +284,7 @@ export function ChatWidget() {
             </div>
 
             <div className="shrink-0 border-t border-zinc-200 p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] dark:border-zinc-700">
-              <div className="flex gap-2">
+              <div className="flex min-w-0 items-end gap-2">
                 <textarea
                   ref={inputRef}
                   value={input}
@@ -294,13 +294,13 @@ export function ChatWidget() {
                   rows={1}
                   disabled={streaming}
                   enterKeyHint="send"
-                  className="flex-1 resize-none rounded-xl border border-zinc-200 bg-transparent px-3 py-2 text-sm outline-none focus:border-brand-500 disabled:opacity-60 dark:border-zinc-700"
+                  className="min-w-0 flex-1 resize-none rounded-xl border border-zinc-200 bg-transparent px-3 py-2 text-[16px] leading-normal outline-none focus:border-brand-500 disabled:opacity-60 dark:border-zinc-700"
                 />
                 <button
                   type="button"
                   onClick={() => void sendMessage()}
                   disabled={streaming || !input.trim()}
-                  className="cursor-pointer rounded-xl bg-brand-600 p-2.5 text-white transition hover:bg-brand-500 disabled:cursor-not-allowed disabled:opacity-50"
+                  className="shrink-0 cursor-pointer rounded-xl bg-brand-600 p-2.5 text-white transition hover:bg-brand-500 disabled:cursor-not-allowed disabled:opacity-50"
                   aria-label={t.chat.send}
                 >
                   <Send className="h-4 w-4" />
