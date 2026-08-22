@@ -16,3 +16,14 @@
   targetPort = 5173
   port = 8888
   autoLaunch = false
+
+# Avoid sticky favicon caches (especially Safari)
+[[headers]]
+  for = "/icons/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, must-revalidate"
+
+[[headers]]
+  for = "/favicon.*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
