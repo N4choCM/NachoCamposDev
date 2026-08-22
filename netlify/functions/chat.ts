@@ -1,18 +1,18 @@
 import type { HandlerEvent } from '@netlify/functions'
 import { stream } from '@netlify/functions'
-import { readFileSync } from 'node:fs'
-import { join } from 'node:path'
 import { Readable } from 'node:stream'
 import { SITE_TITLE, SITE_URL } from '../../src/constants/site'
+import { KNOWLEDGE_JSON } from '../../src/generated/knowledge'
 
 const SYSTEM_PROMPT = `You are the AI assistant on Nacho Campos Martí's personal portfolio website.
 
 STRICT RULES — follow these without exception:
-1. ONLY answer questions about Juan Ignacio "Nacho" Campos Martí and topics explicitly covered in the KNOWLEDGE BASE below (career, skills, projects, education, experience, languages, certifications, contact details).
+1. ONLY answer questions about Juan Ignacio "Nacho" Campos Martí and topics explicitly covered in the KNOWLEDGE BASE below (career, skills, projects, education, experience, languages, certifications, contact details such as email and phone).
 2. If a question is NOT about Nacho or his profile — including general knowledge, sports, news, politics, other people, unrelated coding help, dates of external events, or anything not in the knowledge base — you MUST refuse. Do NOT answer using your general training knowledge, even if you know the answer.
 3. If the question is about Nacho but the answer is not in the knowledge base, say honestly that you don't have that information. Never invent or guess.
-4. Keep answers concise, friendly, and professional. Match the language the user writes in (English or Spanish).
-5. Use plain text only. Do not use markdown, asterisks, or bullet symbols.
+4. When contact details (email, phone, social links) appear in the knowledge base, share them when asked. Do not claim they are unavailable if they are present.
+5. Keep answers concise, friendly, and professional. Match the language the user writes in (English or Spanish).
+6. Use plain text only. Do not use markdown, asterisks, or bullet symbols.
 
 When refusing an off-topic question, reply ONLY with a short message like:
 - Spanish: "Solo puedo ayudarte con preguntas sobre Nacho Campos y su perfil profesional. ¿Hay algo sobre su experiencia, proyectos o formación que te gustaría saber?"
@@ -20,19 +20,6 @@ When refusing an off-topic question, reply ONLY with a short message like:
 
 KNOWLEDGE BASE:
 `
-
-let kbCache: string | null = null
-
-function getKb(): string {
-  if (kbCache) return kbCache
-  try {
-    const path = join(process.cwd(), 'netlify/functions/knowledge.json')
-    kbCache = readFileSync(path, 'utf-8')
-    return kbCache
-  } catch {
-    return '{}'
-  }
-}
 
 const rateLimitMap = new Map<string, { count: number; resetAt: number }>()
 const RATE_LIMIT = 20
@@ -103,7 +90,8 @@ export const handler = stream(async (event: HandlerEvent) => {
 
     const userMessages = (body.messages ?? []).slice(-10)
 
-    const model = process.env.OPENROUTER_MODEL ?? 'meta-llama/llama-3.3-70b-instruct:free'
+    const model =
+      process.env.OPENROUTER_MODEL ?? 'meta-llama/llama-3.3-70b-instruct:free'
 
     const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
       method: 'POST',
@@ -116,7 +104,7 @@ export const handler = stream(async (event: HandlerEvent) => {
       body: JSON.stringify({
         model,
         messages: [
-          { role: 'system', content: SYSTEM_PROMPT + getKb() },
+          { role: 'system', content: SYSTEM_PROMPT + KNOWLEDGE_JSON },
           ...userMessages,
         ],
         stream: true,
