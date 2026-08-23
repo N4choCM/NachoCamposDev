@@ -32,15 +32,21 @@ export function ProjectsGrid() {
   )
 }
 
+function resolveProjectImage(image: ProjectItem['image'], locale: 'en' | 'es'): string {
+  const key = typeof image === 'string' ? image : image[locale]
+  return projectImages[key] ?? key
+}
+
 function ProjectCard({ project }: { project: ProjectItem }) {
-  const { t } = useI18n()
+  const { t, locale } = useI18n()
   const description = useLocalized(project.description)
+  const imageSrc = resolveProjectImage(project.image, locale)
 
   return (
     <article className="group glass flex flex-col overflow-hidden rounded-xl shadow-sm transition hover:shadow-lg hover:shadow-brand-500/5">
       <div className="relative aspect-video overflow-hidden">
         <img
-          src={projectImages[project.image] ?? project.image}
+          src={imageSrc}
           alt={project.title}
           className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
           loading="lazy"

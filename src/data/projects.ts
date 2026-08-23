@@ -17,7 +17,10 @@ export const projects: ProjectItem[] = [
   {
     id: 'ruben-ruzafa',
     title: 'Rubén Ruzafa',
-    image: 'rubenRuzafa.jpg',
+    image: {
+      en: 'rubenRuzafa-en.jpg',
+      es: 'rubenRuzafa-es.jpg',
+    },
     tech: ['React', 'EmailJS', 'Netlify'],
     description: {
       en: 'Official website for professional triathlete Rubén Ruzafa (7× world champion). Responsive landing with biography, achievements, calendar, gallery, contact, and a section where he offers personal coaching services.',

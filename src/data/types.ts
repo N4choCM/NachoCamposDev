@@ -24,7 +24,8 @@ export interface ExperienceItem {
 export interface ProjectItem {
   id: string
   title: string
-  image: string
+  /** Single image, or one per locale (e.g. localized landing screenshots). */
+  image: string | LocalizedString
   tech: string[]
   description: LocalizedString
   links: {
