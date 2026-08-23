@@ -1,9 +1,10 @@
 import type { ReactNode } from 'react'
 import { ExternalLink, FileText, Github, Play } from 'lucide-react'
+import { GITHUB_REPOS_URL } from '@/constants/site'
 import { projects } from '@/data/projects'
 import { projectImages } from '@/data/projectImages'
 import { useI18n, useLocalized } from '@/i18n/context'
-import { SectionHeading, TechBadge } from '@/components/ui'
+import { Button, SectionHeading, TechBadge } from '@/components/ui'
 import type { ProjectItem } from '@/data/types'
 
 export function ProjectsGrid() {
@@ -18,6 +19,13 @@ export function ProjectsGrid() {
           {projects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
+        </div>
+
+        <div className="mt-10 flex justify-center">
+          <Button href={GITHUB_REPOS_URL} variant="secondary" target="_blank">
+            <Github className="h-4 w-4" />
+            {t.projects.viewMore}
+          </Button>
         </div>
       </div>
     </section>

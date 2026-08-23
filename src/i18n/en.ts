@@ -41,6 +41,7 @@ export const ui = {
     viewDemo: 'Demo',
     viewDocs: 'Docs',
     viewStore: 'Store',
+    viewMore: 'View more projects',
   },
   education: {
     viewCertificate: 'View certificate',

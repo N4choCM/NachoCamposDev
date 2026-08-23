@@ -2,6 +2,33 @@ import type { ProjectItem } from './types'
 
 export const projects: ProjectItem[] = [
   {
+    id: 'vulnassist',
+    title: 'VulnAssist',
+    image: 'vulnassist.png',
+    tech: ['Python', 'FastAPI', 'React', 'BERT', 'RoBERTa', 'Ollama', 'Docker'],
+    description: {
+      en: "Bachelor's dissertation: hybrid NLP conversational system for querying and analyzing cybersecurity vulnerabilities from NVD and MITRE ATT&CK, with intent classification, dialogue management, and grounded LLM responses.",
+      es: 'TFG del Grado en Ingeniería Informática: sistema conversacional híbrido con NLP para consultar y analizar vulnerabilidades de ciberseguridad desde NVD y MITRE ATT&CK, con clasificación de intenciones, gestión de diálogo y respuestas LLM fundamentadas.',
+    },
+    links: {
+      github: 'https://github.com/N4choCM/vuln-assist',
+    },
+  },
+  {
+    id: 'ruben-ruzafa',
+    title: 'Rubén Ruzafa',
+    image: 'rubenRuzafa.jpg',
+    tech: ['React', 'EmailJS', 'Netlify'],
+    description: {
+      en: 'Official website for professional triathlete Rubén Ruzafa (7× world champion). Responsive landing with biography, achievements, calendar, gallery, and contact.',
+      es: 'Web oficial del triatleta profesional Rubén Ruzafa (7× campeón del mundo). Landing responsive con biografía, palmarés, calendario, galería y contacto.',
+    },
+    links: {
+      github: 'https://github.com/N4choCM/webRubenRuzafa',
+      demo: 'https://www.rubenruzafa.com',
+    },
+  },
+  {
     id: 'redflix',
     title: 'Redflix REST API',
     image: 'redflixApiPic.jpg',
@@ -41,34 +68,6 @@ export const projects: ProjectItem[] = [
     links: {
       github: 'https://github.com/N4choCM/shadowbane',
       demo: 'https://shadowbane.netlify.app/',
-    },
-  },
-  {
-    id: 'nacho-gpt',
-    title: 'Nacho-GPT',
-    image: 'Nacho-gpt-lg.jpg',
-    tech: ['Python', 'Reflex', 'OpenAI'],
-    description: {
-      en: 'ChatGPT clone powered by GPT-3.5, built with Python and the Reflex framework.',
-      es: 'Clon de ChatGPT con GPT-3.5, construido con Python y el framework Reflex.',
-    },
-    links: {
-      github: 'https://github.com/N4choCM/Nacho_GPT',
-      demo: 'https://www.youtube.com/watch?v=bZS5Ut1ctFI',
-    },
-  },
-  {
-    id: 'flagged',
-    title: 'Flagged!',
-    image: 'flagged.jpg',
-    tech: ['Kotlin', 'Android'],
-    description: {
-      en: 'Flag quiz Android app published on Google Play Store.',
-      es: 'App Android de quiz de banderas publicada en Google Play Store.',
-    },
-    links: {
-      github: 'https://github.com/N4choCM/flagged',
-      store: 'https://play.google.com/store/apps/details?id=com.nachocampos.flagged',
     },
   },
   {

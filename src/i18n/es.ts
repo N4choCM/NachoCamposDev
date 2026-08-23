@@ -43,6 +43,7 @@ export const ui: UiTranslations = {
     viewDemo: 'Demo',
     viewDocs: 'Docs',
     viewStore: 'Store',
+    viewMore: 'Ver más proyectos',
   },
   education: {
     viewCertificate: 'Ver certificado',
