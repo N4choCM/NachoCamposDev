@@ -1,10 +1,13 @@
 import { Mail, MessageCircle, Phone } from 'lucide-react'
+import { buildWhatsAppUrl } from '@/constants/contact'
 import { profile } from '@/data/profile'
 import { useI18n } from '@/i18n/context'
 import { SectionHeading } from '@/components/ui'
 
 export function ContactSection() {
   const { t } = useI18n()
+
+  const whatsappHref = buildWhatsAppUrl(profile.phone, t.contact.whatsappMessage)
 
   const contacts = [
     {
@@ -25,7 +28,7 @@ export function ContactSection() {
       icon: MessageCircle,
       label: t.contact.whatsapp,
       value: t.contact.whatsappCta,
-      href: profile.whatsapp,
+      href: whatsappHref,
       wrap: false,
     },
   ]

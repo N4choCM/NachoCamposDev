@@ -51,6 +51,8 @@ export const ui = {
     phone: 'Phone',
     whatsapp: 'WhatsApp',
     whatsappCta: 'Message me',
+    whatsappMessage:
+      'Hi Nacho! I found your portfolio and would like to get in touch.',
   },
   footer: {
     rights: 'All rights reserved.',

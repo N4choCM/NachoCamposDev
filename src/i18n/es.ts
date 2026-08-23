@@ -53,6 +53,8 @@ export const ui: UiTranslations = {
     phone: 'Teléfono',
     whatsapp: 'WhatsApp',
     whatsappCta: 'Escríbeme',
+    whatsappMessage:
+      '¡Hola, Nacho! He visto tu portfolio y me gustaría contactar contigo.',
   },
   footer: {
     rights: 'Todos los derechos reservados.',

@@ -95,7 +95,6 @@ export const profile = {
   } satisfies LocalizedStringArray,
   email: 'nachocamposmarti@gmail.com',
   phone: '+34 628 523 682',
-  whatsapp: 'https://wa.link/8g6ywt',
   social: [
     { name: 'GitHub', url: 'https://github.com/N4choCM', icon: 'github' },
     { name: 'LinkedIn', url: 'https://www.linkedin.com/in/ignacio-campos-marti', icon: 'linkedin' },
