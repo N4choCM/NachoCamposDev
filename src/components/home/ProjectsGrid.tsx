@@ -21,7 +21,7 @@ export function ProjectsGrid() {
           ))}
         </div>
 
-        <div className="mt-10 flex justify-center">
+        <div className="mt-10 flex justify-center lg:justify-start">
           <Button href={GITHUB_REPOS_URL} variant="secondary" target="_blank">
             <Github className="h-4 w-4" />
             {t.projects.viewMore}

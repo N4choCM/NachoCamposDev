@@ -7,7 +7,7 @@ export const projects: ProjectItem[] = [
     image: 'vulnassist.png',
     tech: ['Python', 'FastAPI', 'React', 'BERT', 'RoBERTa', 'Ollama', 'Docker'],
     description: {
-      en: "Bachelor's dissertation: hybrid NLP conversational system for querying and analyzing cybersecurity vulnerabilities from NVD and MITRE ATT&CK, with intent classification, dialogue management, and grounded LLM responses.",
+      en: "Bachelor's dissertation in Computer Science: hybrid NLP conversational system for querying and analyzing cybersecurity vulnerabilities from NVD and MITRE ATT&CK, with intent classification, dialogue management, and grounded LLM responses.",
       es: 'TFG del Grado en Ingeniería Informática: sistema conversacional híbrido con NLP para consultar y analizar vulnerabilidades de ciberseguridad desde NVD y MITRE ATT&CK, con clasificación de intenciones, gestión de diálogo y respuestas LLM fundamentadas.',
     },
     links: {
@@ -20,8 +20,8 @@ export const projects: ProjectItem[] = [
     image: 'rubenRuzafa.jpg',
     tech: ['React', 'EmailJS', 'Netlify'],
     description: {
-      en: 'Official website for professional triathlete Rubén Ruzafa (7× world champion). Responsive landing with biography, achievements, calendar, gallery, and contact.',
-      es: 'Web oficial del triatleta profesional Rubén Ruzafa (7× campeón del mundo). Landing responsive con biografía, palmarés, calendario, galería y contacto.',
+      en: 'Official website for professional triathlete Rubén Ruzafa (7× world champion). Responsive landing with biography, achievements, calendar, gallery, contact, and a section where he offers personal coaching services.',
+      es: 'Web oficial del triatleta profesional Rubén Ruzafa (7× campeón del mundo). Landing responsive con biografía, palmarés, calendario, galería, contacto y una sección donde ofrece sus servicios como entrenador personal.',
     },
     links: {
       github: 'https://github.com/N4choCM/webRubenRuzafa',
